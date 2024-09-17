@@ -1,1 +1,1 @@
-# zaklady-elektrickych-strojov
+# Základy Elektrickych Strojov
