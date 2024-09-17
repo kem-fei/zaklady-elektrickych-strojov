@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZES</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="links" href="../index.html">Domov</a>
+            <div class="dropdown-menu">
+                <button class="menu-btn">Cvičenia</button>
+                <div class="menu-content">
+                    <a class="links-hidden" href="01-lab.html">01. Úvod a BOZP</a>
+                    <a class="links-hidden" href="02-lab.html">02. Transformátor</a>
+                    <a class="links-hidden" href="03-lab.html">03. Meranie TR</a>
+                    <a class="links-hidden" href="04-lab.html">04. Synchrónny stroj</a>
+                    <a class="links-hidden" href="05-lab.html">05. Meranie SS</a>
+                    <a class="links-hidden" href="06-lab.html">06. Meranie SS</a>
+                    <a class="links-hidden" href="07-lab.html">07. Asynchrónny stroj</a>
+                    <a class="links-hidden" href="08-lab.html">08. Meranie AM</a>
+                    <a class="links-hidden" href="09-lab.html">09. Meranie AM</a>
+                    <a class="links-hidden" href="10-lab.html">10. Jednosmerný stroj</a>
+                    <a class="links-hidden" href="11-lab.html">11. Meranie JM</a>
+                    <a class="links-hidden" href="12-lab.html">12. Zápočet a dotazník</a>
+                </div>
+            </div>
+            <a class="links" href="../download.html">Na stiahnutie</a>
+        </nav>
+        <h1>01. Úvod a BOZP</h1>
+    </header>
+
+    <article>
+
+        <h2>
+            Ciele cvičenia
+        </h2>
+
+        <ul>
+            <li>Úvod do elektrických strojov</li>
+            <li>Školenie študentov v oblasti BOZP</li>
+        </ul>
+
+        <h2>
+            1. Úvod do elektrických strojov
+        </h2>
+
+        <p>
+            Elektrické stroje, ako sú transformátory, motory a generátory, patria medzi základné zariadenia využívané na premenu energie. Ich princíp fungovania je založený na teórii elektromagnetického poľa, ktorá opisuje vzájomné pôsobenie elektrických a magnetických polí. Elektromagnetická indukcia, ktorá vzniká pri pohybe vodiča v magnetickom poli alebo pri zmene magnetického toku, je základom pre generovanie elektrického napätia v generátoroch, zatiaľ čo elektromagnetická sila pôsobiaca na vodič s prúdom umožňuje pohon elektrických motorov.
+        </p>
+
+        <h3>
+            1.1 Elektromagnetická indukcia
+        </h3>
+
+        <p>
+            Základným zákonom elektrických strojov je Faradayov zákon elektromagnetickej indukcie ktorý znie nasledovne:
+        </p>
+
+        <p class="citation">
+            Indukované napätie \( u_\mathrm{i} \) vniká všade tam, kde sa v čase \( t \) mení magnetický tok \( \phi \).
+        </p>
+
+        <p>
+            Zo základov elektrotechniky vieme, že magnetický tok je priamoúmerný súčinu magnetickej indukcie \( B \) a prierezu magnetického obvodu \( S \):
+
+            \[ \phi = B S \]
+
+            Ako sme už povedali, pri časovej zmene magnetického toku cez plochu obklopenú vodičom sa indukuje vo vodiči napätie \( u_\mathrm{i} \). Nezáleží však na tom, či sa zmena magnetického toku dosiahne:
+            <ul>
+                <li>zmenou magnetickej indukcie \( B \) (<strong>indukované transformačné napätie</strong>)</li>
+                <li>zmenou prierezu magnetického obvodu \( S \) (<strong>indukované pohybové napätie</strong>)</li>
+            </ul>
+            
+        </p>
+
+        <h4>Indukované transformačné napätie</h4>
+
+        <p>
+            Ak na statickú cievku pripojíme časovo premenlivý prúd, tento striedavý prúd vytvorí v cievke meniaci sa magnetický tok, ktorý sa uzatvára v magnetickom obvode stroja. Pri napájaní cievky sínusovým prúdom vzniká sínusový magnetický tok \( \phi \). Tento tok následne indukuje v cievke napätie, ktoré sa nazýva <strong>transformačné napätie</strong>:
+
+            \[ u_\mathrm{i} = - N \frac{d \phi}{d t} = - \frac{d \psi}{d t} \]
+    
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( N \) je počet závitov cievky</li>
+                <li>\( \psi \) je celkový spriahnuty magnetický tok:</li>
+            </ul>
+    
+            \[ \psi = N \phi \]
+        </p>
+        
+        <h4>Indukované pohybové napätie</h4>
+
+        <p>
+            Naopak, ak máme cievku s dĺžkou \( l \) a začneme ju otáčať v magnetickom poli s indukciou \( B \) rýchlosťou \( v \), v cievke sa začne indukovať napätie, ktoré sa nazýva <strong>pohybové napätie</strong>:
+
+            \[ u_\mathrm{i} = B \, l \, v \]
+            
+            Toto napätie vzniká v dôsledku toho, že pohyb cievky v magnetickom poli spôsobuje zmenu magnetického toku cez cievku. Tento pohyb generuje elektrické napätie, ktoré je priamo úmerné rýchlosti otáčania cievky a intenzite magnetického poľa.
+        </p>
+            
+
+        <h3>
+            1.2 Zákon celkového prúdu
+        </h3>
+
+        <p>
+            Konštrukcia elektrických strojov vychádza z takzvaného <strong>zákona celkového prúdu</strong>, známeho tiež aj ako <strong>zákona prietoku</strong>:
+
+            \[ N \, I = H \, l \]
+
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( I \) je prúd tečúci cievkou</li>
+                <li>\( N \) je počet závitov cievky</li>
+                <li>\( l \) je dĺžka magnetickej siločiary</li>
+                <li>\( H \) je intenzita magnetického poľa</li>
+            </ul>
+
+            Intenzita magnetického poľa \( H \) je závislá od magnetickej indukcie \( B \) a permeability magnetického obvodu \( \mu \):
+
+            \[ B = \mu H = \mu_0 \, \mu_\mathrm{r} \, H \]
+
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( \mu_0 \) je permeabilita vákua</li>
+                <li>\( \mu_\mathrm{r} \) je relatívna permeabilita</li>
+            </ul>
+        </p>
+
+        <h3>
+            1.3 Elektrický stroj - menič energie
+        </h3>
+
+        <p>
+            Každý elektrický stroj premieňa privedenú energiu, pričom na jeho výstupe dochádza k zmene charakteru tejto energie. Energia sa môže meniť:
+
+            <ul>
+                <li>z elektrickej na mechanickú - <strong>elektromotory</strong></li>
+                <li>z mechanickej na elektrickú - <strong>generátory</strong></li>
+                <li>z elektrickej na elektrickú - <strong>transformátory</strong></li>
+            </ul>
+
+            Elektrické stroje môžeme rozdeliť podľa:
+            <ul>
+                <li><strong>výkonu</strong></li>
+                <ul>
+                    <li>veľmi malé elektrické stroje (do 0,5 kW)</li>
+                    <li>malé elektrické stroje (0,5 - 10 kW)</li>
+                    <li>stredné elektrické stroje (10 - 250 kW)</li>
+                    <li>veľké elektrické stroje (nad 250 kW)</li>
+                </ul>
+                <li><strong>rýchlosti</strong></li>
+                <ul>
+                    <li>pomalobežné (do 300 ot/min)</li>
+                    <li>strednobežné (300 - 1500 ot/min)</li>
+                    <li>rýchlobežné (200 - 6000 ot/min)</li>
+                    <li>veľmi rýchlobežné (nad 6000 ot/min)</li>
+                </ul>
+                <li><strong>napájacieho prúdu</strong></li>
+                <ul>
+                    <li>jendosmerné stroje</li>
+                    <li>striedavé stroje</li> 
+                    <ul>
+                        <li>s harmonickým napätím</li>
+                        <li>s neharmonickým napätím</li>
+                    </ul>
+                </ul>
+                <li><strong>podľa počtu fáz</strong></li>
+                <ul>
+                    <li>jednofázové stroje</li>
+                    <li>trojfázové stroje</li>
+                    <li>viacfázové stroje</li>
+                </ul>
+            </ul>
+
+            V každom stroji vznikajú straty a preto sa pozrieme aj na výkonovú bilanciu stroja.
+        </p>
+
+        <h3>
+            1.4 Výkonová bilancia, účinnosť elektrických strojov
+        </h3>
+
+        <p>
+            Privedený výkon \( P_1 \) (príkon) je vždy väčší ako výkon stroja \( P \), pričom rozdiel týchto výkonov tvoria straty elektrického stroja \( \Delta P \). Účinnosť elektrického stroja \( \mu \) je potom daná pomerom medzi výkonom \( P \) a príkonom \( P_1 \):
+
+            \[ \mu = \frac{P}{P_1} \]
+
+            Ak potrebujeme vyjadriť účinnosť elektrického stroja v percentách, účinnosť jednoducho vynásobíme nasledovným spôsobom:
+            
+            \[ \mu_\% = \mu \cdot 100\,\% \]
+
+            Straty v elektrických strojoch rozdeľujeme na:
+            <ul>
+                <li>straty v elektrickom obvode - \( \Delta P_\mathrm{j} \) </li>
+                <li>straty v magnetickom obvode - \( \Delta P_\mathrm{Fe} \) </li>
+                <li>straty mechanické - \( \Delta P_\mathrm{m} \) </li>
+                <li>straty prídavné - \( \Delta P_\mathrm{d} \) </li>
+            </ul>
+        </p>
+
+        <h4>
+            Straty v elektrických obvode 
+        </h4>
+
+        <p>
+            Straty v elektrických obvode \( \Delta P_\mathrm{j} \) vznikajú prechodom elektrického prúdu vinutím stroja. Veľkosť strát závisí od odporu vinutia a kvadrátu prechádzajúceho prúdu:
+
+            \[ \Delta P_\mathrm{j} = m R I^2 \]
+
+            Vzniknuté straty (teplo) ohrievajú vodiče. Teplota vodičov však nesmie prekročiť maximálnu dovolenú teplotu izolácie. V opačnom prípade hrozí poškodenie elektrického obvodu.
+        </p>
+
+        <h4>
+            Straty v magnetickom obvode 
+        </h4>
+
+        <p>
+            Straty v magnetickom obvode \( \Delta P_\mathrm{Fe} \) sú straty, ktoré vznikajú v magnetickom obvode stroja. Tieto straty delíme na:
+
+            <ul>
+                <li>straty hysterézne - \( \Delta P_\mathrm{h} \) </li>
+                <li>straty vírivými prúdmi - \( \Delta P_\mathrm{v} \) </li>
+            </ul>
+
+            Výsledné straty v železe sú súčtom týchto strát:
+
+            \[ \Delta P_\mathrm{Fe} = \Delta P_\mathrm{h} + \Delta P_\mathrm{v} \]
+        </p>
+
+        <p>
+            <strong>Hysterézne straty</strong> vznikajú pri každom premagnetovaní, ktoré sú úmerné ploche hysteréznej slučky. Pretože straty vznikajú pri každom prechode hysteréznou slučkou, hysterézne straty sú závislé nielen od sýtenia materiálu, ale aj od frekvencie zmeny. Zníženie hysteréznych strát je možné použitím magnetických materiálov s čo najužšou hysteréznou slučkou.
+        </p>
+
+        <p>
+            <strong>Straty vírivými prúdmi</strong> vznikajú pri sýtení magnetického materiálu premenlivým magnetickým tokom. Pri sítení sa v ňom indukuje napätie. Toto je reakciou na zmenu magnetického poľa. Keďže magnetický materiál je elektricky vodivý, tak ním začnú pretekať prúdy, ktorým hovoríme vírivé prúdy.
+        </p>
+
+        <h4>
+            Straty mechanické 
+        </h4>
+
+        <p>
+            Mechanické straty \( \Delta P_\mathrm{m} \) vznikajú pri otáčaní stroja (trením v ložiskách, ventilačné straty). Veľkosť mechanických strát je približne \( 0{,}5\,\% P_\mathrm{N} \). Tieto straty vznikajú len pri točivých elektrických strojoch.
+        </p>
+
+        <h4>
+            Straty prídavné
+        </h4>
+
+        <p>
+            Prídavné straty \( \Delta P_\mathrm{d} \) sú elektrické straty ktoré vznikajú bludnými prúdmi v nosnej konštrukcii elektrického stroja. Sú veľmi malé a vo všeobecnosti sa zanedbávajú.
+        </p>
+
+        <h4>
+            Celkové straty
+        </h4>
+
+        <p>
+            Celkové straty v elektrickom stroji sú dané súčtom jednotlivých strát:
+
+            \[ \sum \Delta P = \Delta P_\mathrm{j} + \Delta P_\mathrm{Fe} + \Delta P_\mathrm{m} + \Delta P_\mathrm{d} \]
+        </p>
+
+        <h2>
+            2. Oboznámenie sa študentov v oblasti BOZP
+        </h2>
+
+        <p>
+            <strong>Bol(a) som oboznámený(á) s uvedenými predpismi na úseku BOZP, ktoré budem dodržiavať:</strong>
+            <ul>
+                <li>rešpektovať príkazy svojich vyučujúcich, ako aj pokyny a smernice vydané TUKE,</li>
+                <li>počínať si tak, aby som neohrozoval svoje zdravie ani zdravie svojich spolužiakov,</li>
+                <li>zúčastňovať sa na oboznamovaniach sa, inštruktážach o BOZP,</li>
+                <li>pri práci v laboratóriách, dielňach a pod. používať predpísané osobné ochranné pracovné prostriedky (OOPP) podľa organizačnej smernice „Poskytovanie a používanie osobných ochranných pracovných prostriedkov“ vydanej TUKE,</li>
+                <li>všetky závady a nedostatky na úseku BOZP hlásiť svojmu vyučujúcemu,	</li>
+                <li>platí prísny zákaz používania alkoholických nápojov, omamných a psychotropných látok,</li>
+                <li>v priestoroch a na pracoviskách so zvýšeným požiarnym nebezpečenstvom dodržiavať zákaz fajčenia a manipulácie s otvoreným ohňom, REŠPEKTOVAŤ VYDANÝ ZÁKAZ  FAJČENIA V OBJEKTOCH TUKE,</li>
+                <li>pracovať len s pracovnými nástrojmi, strojmi a prístrojmi, ktoré sú v bezchybnom technickom stave,</li>
+                <li>nedotýkať sa el. vedenia, nemanipulovať s el. zariadeniami, na ktoré nemám oprávnenie, alebo nie som o nich poučený(á) podľa vyhlášky MPSVaR č. 508/2009 o VTZ v znení neskorších predpisov,</li>
+                <li>neopravovať el. poistky,</li>
+                <li>nezakladať predmetmi bezpečnostné prechody, chodby, dvere, rozvádzače, označené ako únikové cesty, </li>
+                <li>prípadný vznik školského úrazu ihneď hlásiť svojmu vyučujúcemu a vedúcemu pracoviska,</li>
+                <li>po ukončení výučby skontrolovať, či sú vypnuté el. spotrebiče a pod.,</li>
+                <li>dodržiavať všeobecné zásady bezpečnosti pri práci v zmysle zákona NR SR č. 124/2006 Z. z. o bezpečnosti a ochrane zdravia pri práci a o zmene a doplnení niektorých zákonov v znení neskorších predpisov,</li>
+                <li>dodržiavať predpisy týkajúce sa zakázaných prác žien a mladistvých, </li>
+                <li>dodržiavať všeobecné zásady bezpečnosti práce pre dané pracovisko, </li>
+                <li>v prípade úrazu poskytnúť prvú pomoc.</li>
+            </ul>
+        </p>
+
+        <h2>
+            Základné zásady jednania osôb pri požiari
+        </h2>
+
+        <p>
+            <strong>Dym alebo zápach dymu je väčšinou prvým signálom požiaru. V prípade, že tento zápach zacítite riaďte sa nasledovnými krokmi:</strong>
+            <ul>
+                <li>Nereagujte bezhlavo, mohlo by vás to stáť život (panika je veľakrát nebezpečnejšia, ako samotný požiar).</li>
+                <li>Vyhľadajte najbezpečnejšiu únikovú cestu (majte premyslenú aj druhú únikovú cestu, ak ešte existuje).</li>
+                <li>Nezdržujte sa zbieraním osobných vecí: zoberte zo sebou iba veci, ktoré vám môžu pomôcť pri "úteku" - hasiaci prístroj, hrubú tkaninu, sekeru, lano... (každá sekunda rozhoduje o vašom živote a treba utekať na "ľahko").</li>
+                <li>Informujte ostatné osoby v budove o požiari volaním "HORÍ", ďalej postupujte podľa Požiarne - evakuačných plánov a Požiarne poplachových smerníc vyvesených na chodbách budov.</li>
+                <li>NEOTVÁRAJTE DVERE PRED TÝM, AKO SKONTROLUJETE ICH TEPLOTU DOTYKOM RUKY V HORNEJ ČASTI DVERÍ!!!</li>
+                <li>Ak sú dvere teplé, znamená to, že oheň je už na druhej strane dverí. </li>
+                <li>Otvorením dverí zabezpečíme ohňu prívod veľkého množstva kyslíku, čo môže mať za následok preskočenie ohňa do našej miestnosti.</li>
+                <li>Zatvárajte za sebou všetky dvere!!!</li>
+                <li>V prípade požiaru nepoužívajte v horiacom objekte výťahy!!!</li>
+                <li>Po opustení objektu sa nevracajte späť.</li>
+                <li>Sledujte neustále situáciu okolo seba!!!</li>
+                <li>Pri zníženej viditeľnosti sa jednou rukou dotýkajte steny - opora, rýchlejší a istejší postup vpred.</li>
+                <li>Ak sa dá, pomôžte ostatným, resp. zraneným.</li>
+            </ul>
+            <strong>Po opustení objektu v prípade požiaru sa zhromaždite pred budovou na vopred dohodnutom mieste (protipožiarne oboznámenie sa a cvičenie). Je nutné zistiť, kto budovu opustil, preto samovoľne z dohodnutého miesta neodchádzajte.</strong>
+        </p>
+
+        <p>
+            <strong>Poznámka:</strong>
+            <ul>
+                <li>Kto musí ísť napríklad na ošetrenie, a ak mu to situácia umožní, musí to nahlásiť vopred dohodnutej osobe.</li>
+                <li>Ak budete hasiť požiar vodou, resp. elektricky vodivou látkou, potom bezpodmienečne musíte budovu odpojiť od elektrického prúdu - NEZABUDNITE !!!</li>
+            </ul>
+        </p>
+
+        <p>
+            <strong>V prípade, že nie je možné opustiť budovu únikovými cestami:</strong>
+            <ul>
+                <li>zachovajte kľud,</li>
+                <li>v prípade zadymenia priestoru sa prikrčte k zemi - podlahe,</li>
+                <li>upozornite na seba z okna mávaním ručníkom, časťou odevu a pod.,</li>
+                <li>keď je vonku tma, striedavo rozsvecujte a vypínajte svetlo.</li>
+            </ul>
+        </p>
+
+    </article>
+
+    <footer>
+        <p>Katedra elektrotechniky a mechatroniky &copy; 2024</p>
+    </footer>
+    </body>
+</html>
