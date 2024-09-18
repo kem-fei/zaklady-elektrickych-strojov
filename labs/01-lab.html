@@ -115,7 +115,7 @@
         </h3>
 
         <p>
-            Konštrukcia elektrických strojov vychádza z takzvaného <strong>zákona celkového prúdu</strong>, známeho tiež aj ako <strong>zákona prietoku</strong>:
+            Konštrukcia elektrických strojov vychádza z takzvaného <strong>zákona celkového prúdu</strong>, známeho tiež aj ako <strong>zákon prietoku</strong>:
 
             \[ N \, I = H \, l \]
 
@@ -220,6 +220,14 @@
 
             \[ \Delta P_\mathrm{j} = m R I^2 \]
 
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( m \) je počet fáz</li>
+                <li>\( R \) je odpor jeden fázy</li>
+                <li>\( I \) je prúd tečúci jednou fázou</li>
+            </ul>
+
             Vzniknuté straty (teplo) ohrievajú vodiče. Teplota vodičov však nesmie prekročiť maximálnu dovolenú teplotu izolácie. V opačnom prípade hrozí poškodenie elektrického obvodu.
         </p>
 
@@ -279,7 +287,13 @@
         </h3>
 
         <p>
+            Pri elektrických strojoch sa môžeme stretnúť s tromi druhmi výkonu:
 
+            <ul>
+                <li>Elektrický výkon jednosmerného prúdu</li>
+                <li>Elektrický výkon striedavého prúdu</li>
+                <li>Mechanický výkon</li>
+            </ul>
         </p>
 
         <h4>
@@ -303,33 +317,78 @@
                 <li><strong>Činný výkon</strong></li>
             </ul>
 
+            Činný výkon, nazývaný aj užitočný výkon, sa pri práci spotrebičov premieňa na tepelnú, mechanickú alebo svetelnú energiu. Meria sa vo Wattoch (W) a jeho matematický zápis je nasledovný:
+
             \[ P = U I \cos \varphi \]
 
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( \cos \varphi \) je  účinník, t.j. pomer činného výkonu k zdanlivému výkonu</li>
+            </ul>
+
+            Činný výkon je definovaný ako priemerná hodnota okamžitého výkonu.Na meranie činného výkonu sa používa wattmeter. Zaujímavé je aj tzv. Aronovo zapojenie, ktoré umožňuje meranie činného výkonu v trojvodičových sústavách.
+        </p>
+
+        <p>
             <div class="one-figure">
                 <div class="figure-with-caption">
                     <img src = "../images/cinny-vykon.svg"/>
                     <p><em>Časový priebeh výkonu na činnom odpore</em></p>
                 </div>
             </div>
+        </p>
 
+        <p>
             <ul>
                 <li><strong>Jalový výkon</strong></li>
             </ul>
 
+            Ako už názov naznačuje, jalový výkon nezohráva aktívnu úlohu pri využití výkonu na napájanie spotrebiča elektrickou energiou. Namiesto toho slúži na ukladanie energie v podobe magnetického a elektrického poľa. Tento komponent výkonu je však nevyhnutný pre správne fungovanie elektrických zariadení, ako sú transformátory a elektromotory. Meria sa vo voltampéroch reaktančných (VAr) a jeho matematický zápis je nasledovný:
+
             \[ Q = U I \sin \varphi \]
 
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( \sin \varphi \) je pomer jalového výkonu k zdanlivému výkonu</li>
+            </ul>
+
+            Rozlišujeme dva typy jalového výkonu:
+
+            <ul>
+                <li><strong>Kapacitný jalový výkon</strong>, ktorý vzniká pri použití zariadení s kapacitným charakterom</li>
+                <li><strong>Indukčný jalový výkon</strong>, ktorý vzniká pri použití zariadení s indukčným charakterom</li>
+            </ul>
+        </p>
+
+        <p>
             <div class="one-figure">
                 <div class="figure-with-caption">
                     <img src = "../images/jalovy-vykon.svg"/>
                     <p><em>Časový priebeh výkonu na indukčnej reaktancii</em></p>
                 </div>
             </div>
+        </p>
 
+        <p>
             <ul>
                 <li><strong>Zdanlivý výkon</strong></li>
             </ul>
 
+            Rovnako ako činný a jalový výkon, aj zdanlivý výkon je výsledkom súčinu napätia a prúdu. Keďže predstavuje kombináciu činného a jalového výkonu, označuje sa tiež ako celkový výkon. Na rozdiel od činného výkonu, ktorý je priamo premenený na užitočnú energiu, a jalového výkonu, ktorý slúži na ukladanie energie v elektrickom alebo magnetickom poli, zdanlivý výkon zahŕňa oba tieto aspekty. Jeho jednotkou je voltampér (VA) a jeho matematický zápis je nasledovný:
+
             \[ S = U I \]
+        
+        </p>
+
+        <p>
+            <div class="one-figure" style="width: 50%;">
+                <div class="figure-with-caption">
+                    <img src = "../images/power.svg"/>
+                    <p><em>Výkony striedavého prúdu</em></p>
+                </div>
+            </div>
         </p>
 
         <h4>
