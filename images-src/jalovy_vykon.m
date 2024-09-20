@@ -16,3 +16,7 @@ hold off
 grid on
 ylim([-5 , 5]);
 legend('Napätie', 'Prúd', 'Výkon', Location='southwest')
+
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';

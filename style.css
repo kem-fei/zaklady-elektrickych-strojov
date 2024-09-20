@@ -39,7 +39,7 @@ h4 {
     font-weight: bold;
     font-size: 18px;
     color: #cc4331;
-    margin-top: 30px;
+    
     margin-bottom: 20px;
 }
 
@@ -148,18 +148,21 @@ nav {
     width: 85%; 
 }
 
-.two-figures {
-    justify-content: space-around;
-    flex-wrap: wrap;
-    display: flex;  
-    margin: 0px auto;
-    width: 80%;
-}
-
-.one-figure {
-    margin: 0px auto;
+.figure {
+    margin-top: 30px;
+    margin: 20px auto;
     width: 80%;
 } 
+
+.figure-gallery {
+    margin-top: 30px;
+    margin: 20px auto;
+    width: 80%;
+} 
+
+.figure-gallery img {
+    border: solid 1px black;
+}
 
 .table {
     margin: 0px auto;
