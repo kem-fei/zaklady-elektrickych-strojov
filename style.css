@@ -141,6 +141,12 @@ nav {
     display: block;
 }
 
+.link-in-text {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cc4331;
+}
+
 .citation {
     text-align: center;
     font-style: italic;
@@ -161,7 +167,8 @@ nav {
 } 
 
 .figure-gallery img {
-    border: solid 1px black;
+    border: none;
+    margin-top: 60px;
 }
 
 .table {

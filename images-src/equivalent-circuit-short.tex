@@ -1,0 +1,50 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = sk_SK
+% !TeX TS-program = pdflatex
+
+\documentclass[convert=pdf2svg]{standalone}
+\usepackage[slovak]{babel}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\definecolor{myColor}{RGB}{168, 168, 168}
+
+\usetikzlibrary{decorations.pathreplacing, calligraphy}
+
+\begin{document}
+\begin{circuitikz}[american, scale = 0.7, transform shape]
+
+\draw[color=myColor] (5 , 3.5) to [short, -*] (5 , 3);
+\draw[color=myColor] (5 , 0.5) to [short, *-] (5 , 0);
+\draw[color=myColor] (4.5 , 3) to [short, -] (5.5 , 3);
+\draw[color=myColor] (4.5 , 0.5) to [short, -] (5.5 , 0.5);
+
+\draw (0 , 3.5) 
+to [short, o-,] (0.5 , 3.5)
+to [european resistor, l=$R_1$] (2 , 3.5)
+to [american inductor, l=$X_{1\sigma}$] (3.5 , 3.5)
+to [short, i=$i_\mathrm{sc}$, -*] (5 , 3.5);
+
+\draw[very thick] (10 , 3.5) -- (10 , 0);
+	 
+\draw (5 , 3.5)
+to [short, i=$i_\mathrm{sc}^\prime$, *-] (6.5 , 3.5)
+to [american inductor, l=$L_{2\sigma}^\prime$] (8 , 3.5)
+to [european resistor, l=$R_2^\prime$] (9.5 , 3.5)
+to [short, -o, ] (10 , 3.5);
+
+\draw[color=myColor] (4.5 , 0.5) to [american inductor, i<=$i_{\mathrm{Xm}}$, l=$X_{\mathrm{m}}$] (4.5 , 3);
+\draw[color=myColor] (5.5 , 3) to [european resistor, i=$i_{\mathrm{Fe}}$, l=$R_{\mathrm{Fe}}$] (5.5 , 0.5);
+
+
+
+\draw (0 , 0) to [short, o-*] (5 , 0) to [short, *-o] (10 , 0);
+
+\ctikzset{voltage/bump b/.initial=0}
+
+\draw (0 , 3.5) to [open, european voltages, v>=$u_\mathrm{sc}$] (0 , 0);
+\draw[color=white!100] (10 , 3.5) to [color=white!100, open, european voltages, v^>=$\,u_2^\prime$] (10 , 0);
+\draw[very thick] (10 , 3.0) -- (10 , 0.5);
+\end{circuitikz}
+\end{document}

@@ -56,32 +56,38 @@
         </h2>
 
         <p>
-
+            Transformátor je definovaný ako <strong>netočivý elektrický stroj</strong> pracujúci na princípe <strong>elektromagnetickej indukcie</strong>. Je určený na transformáciu striedavého vstupného napätia na striedavé výstupné napäte obyčajne rôznej napäťovej úrovne. Aj napriek rôznej napäťovej úrovni je frekvencia výstupného napätia rovnaká ako na vstupe. Transformátor sa skladá z dvoch, alebo viacerých vinutí uložených na spoločnom magnetickom obvode. Vstupné vinutie obvykle nazývame primárne a výstupné sekundárne. Pre lepšiu predstavu o tom čo je to transformátor je možné prezriet si fotografie transfomrátorov v <a class="link-in-text" href="../gallery/01-gallery-transformer.html">galérii</a>.
         </p>
 
-        <h3>
-            1.1 Primárne a sekundárne vinutie transformátora
-        </h3>
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L02-04-transformer.png"/>
+                <p><em>Principiálne usporiadanie transformátora</em></p>
+            </div>
+        </div>
 
         <p>
-
+            <strong>Primárne vinutie</strong>, vytvára meniace sa magnetické pole vďaka striedavému prúdu. Toto vinutie je navinuté na jadro, pričom je od neho elektricky oddelené.
         </p>
-
-        <h3>
-            1.2 Magnetické jadro transformátora
-        </h3>
 
         <p>
-
+            <strong>Sekundárne vinutie</strong>, je rovnako navinuté na jadre. V tomto vinutí sa indukuje striedavý prúd.
         </p>
-      
 
+        <p>
+            <strong>Jadro</strong> prenáša energiu prostredníctvom meniaceho sa magnetického poľa a je vyrobené z magneticky mäkkého materiálu. Na zníženie strát spôsobených vírivými prúdmi sa používajú lakované tenké plechy alebo feritové materiály. Jadro môže mať obdĺžnikový tvar alebo môže byť toroidné, teda kruhové. Maximálny výkon transformátora závisí od prierezu jadra a frekvencie prúdu.
+        </p>
+   
         <h2>
             2. Princíp činnosti transformátora
         </h2>
 
         <p>
-           
+            Primárne a sekundárne vinutie transformátora sú magneticky viazané vďaka magnetickému obvodu o veľmi malom magnetickom odpore. Malý magnetický odpor zaručuje zvýšenú koncentráciu magnetických siločiar v jadre. Ak je primárne vinutie napájané zo zdroja premenlivého napätia, to vybudí vo vinutí premenlivý prúd a tak bude aj magnetický tok cirkulujúci v jadre premenlivý. Jeho amplitúda bude závisieť od počtu závitov primárneho vinutia \( N_1 \) a od veľkosti primárneho prúdu \( i_1 \). Vzájomný tok spájajúci obidve cievky indukuje v sekundárnom vinutí napätie úmerné počtu závitov sekundárneho vinutia \( N_2 \). Pripojenie záťaže na sekundárne vinutie spôsobí tok sekundárneho prúdu \( i_2 \).
+        </p>
+
+        <p>
+            Pre lepšiu predstavu odporúčame pozrieť si nasledujúce video.
         </p>
 
         <div class="video-container">   
@@ -94,60 +100,37 @@
                 allowfullscreen
             ></iframe>
         </div> 
-
-        <p>
-
-        <h3>
-            2.6 Faradayov indukčný zákon
-        </h3>
-
-        <p>
-
-        </p>
            
 
         <h3>
-            2.7 Napätie primárnej a sukundárnej strany
+            2.1 Napätie primárnej a sukundárnej strany
         </h3>
 
         <p>
+            Napätie primárneho a sekundárneho vinutia transformátora závisí od počtu závitov \( N_1 \) a \( N_2 \) a taktiež od spoločného magnetického toku \( \phi \):
 
+            \[ u_1 = N_1 \frac{\mathrm{d}\phi}{\mathrm{d}t} \]
+            \[ u_2 = N_2 \frac{\mathrm{d}\phi}{\mathrm{d}t} \]
+
+            Magnetický tok \( \phi \) je rovnaký pre primárnu a sekundárnu stranu. Z toho vyplýva, že pomer napätí medzi primárnou a sekundárnou stranou je možné prispôsobiť jedine pomocou počtu závitov na jednotlivých vinutiach transformátora. Na základe známeho počtu závitov je možné určiť prevod transformátora.
         </p>
 
         <h3>
-            2.8 Prevod ideálneho transformátora
+            2.2 Prevod ideálneho transformátora
         </h3>
 
         <p>
+            <strong>Prevod transformátora</strong> určuje, ako sa napätie a prúd transformuje medzi vstupom a výstupom transformátora, pričom, ako už bolo spomenuté, pomer závitov priamo ovplyvňuje prevod. Prevod ideálneho transformátora  možeme získať z nasledovných pomerov:
 
+            \[ a = \frac{N_1}{N_2} = \frac{u_1}{u_2} = \frac{i_2}{i_1} \]
         </p>
 
         <h2>
-            3. Straty v transformátore
-        </h2>
-
-        <h3>
-            3.1 Straty v medi
-        </h3>
-
-        <p>
-
-        </p>
-
-        <h3>
-            3.2 Straty v železe
-        </h3>
-
-        <p>
-
-        </p>
-        
-        <h2>
-            4 Náhradná schéma transofrmátora
+            3 Náhradná schéma transofrmátora
         </h2>
 
         <p>
-
+            Náhradná schéma transformátora slúži na zjednodušený opis jeho správania v elektrickej sieti, umožňuje analyzovať jeho prevádzkové vlastnosti, ako sú straty, napäťové poklesy alebo účinnosť. Táto schéma pozostáva z odporov \( R_1 \) a \( R_2 \), ktoré predstavujú odpor primárneho a sekundárneho vinutia, ďalej z indukčných reaktancií \( X_{1\sigma} \) a \( X_{2\sigma} \), ktoré predstavujú reaktancie (možno z nich určiť indukčnosti) primárneho a sekundárneho vinutia a nakoniec z magnetizačnej reaktancie \( X_\mathrm{m} \) zohľadňujúcej magnetizačný prúd a fiktívneho odporu strát v železe \( R_\mathrm{Fe} \), ktorý zohľadňuje straty v magnetickom obvode transformátora.
         </p>
 
         <div class="figure">
@@ -166,7 +149,19 @@
         </h3>
 
         <p>
+            V stave naprázdno je sekundár transformátora otvorený (\( I_2 = 0 \)). Keďže cez sekundárnu stranu netečie prúd, Impedanciu na sekundárnej strane \( Z_2 \) môžeme zanedbať. Magnetizačná impedancia \( Z_\mathrm{m} \) je omnoho väčšia ako impedancia na primarnej strane \( Z_1 \). Impedanciu \( Z_1 \) tak môžeme zanedbať. Ak vezmeme do úvahy všetko uvedené, potom môžeme náhradnú schému zjednodušiť nasledovne.
+        </p>
 
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L02-02-equivalent-circuit-open.svg"/>
+                <p><em>Náhradná schéma jednofázového transofrmátora v stave naprázdno</em></p>
+            </div>
+        </div>
+
+        <p>
+            V stave naprázdno sa transformátor správa ako veľká indukčnosť. Magnetizačná zložka prúdu je oveľa väčšia ako činná zložka prúdu strát v železe (\( I_\mathrm{m} > I_\mathrm{Fe} \)). Uhol medzi napájacím napätím a prúdom naprázdno je veľký,
+            to znamená že účinník naprázdno je veľmi nepriaznivý.
         </p>
 
         <h3>
@@ -174,7 +169,73 @@
         </h3>
 
         <p>
+            V stave nakrátko je sekundárne vinutie transformátora skratované bez odporovou spojkou. Sekundárne napätie je rovné nule (\( U_2 = 0 \)). Pri skrate by však transformátorom pretekal skratový prúd, ktorý značne prevyšuje nominálne hodnoty. Transformátor by sa vplyvom strát v medi zničil. Z toho dôvodu pri skratovaní sekundárneho vinutia musíme znížiť napájacie napätie. Hodnota primárneho napätia pri ktorom v skrate tečie primárnym vinutím nominálny prúd nazývame napätie nakrátko transformátora \( U_\mathrm{k} \). Napätie nakrátko býva pomerne malé. Z toho dôvodu môžeme prúd naprázdno zanedbať, čo znamená že z náhradnej schémy môžeme vypustiť prvky \( R_\mathrm{Fe} \) a \( X_\mathrm{m} \). Takže náhradná schéma transformátora v stave naprázdno sa zjednoduší nasledovne.
+        </p>
 
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L02-03-equivalent-circuit-short.svg"/>
+                <p><em>Náhradná schéma jednofázového transofrmátora v stave nakrátko</em></p>
+            </div>
+        </div>
+
+        <h3>
+            3.3 Prepočet impedancií
+        </h3>
+
+        <p>
+            Napätie, prúd a impedancie na sekundárnej strane je možné prepočítať na primárnu stranu pomocou nasledovných vzťahov:
+
+            \[
+                \begin{array}{ccc}
+                    U_2^\prime = a U_2; & I_2^\prime = \dfrac{I_2}{a}; & Z_2^\prime = a^2 Z_2
+                \end{array}
+            \]
+
+
+            Funguje to aj naopak. Napätie, prúd a impedancie na primárnej strane je možné prepočítať na sekundárnu stranu pomocou nasledovných vzťahov:
+
+            \[
+                \begin{array}{ccc}
+                    U_1^\prime = \dfrac{U_1}{a}; & I_1^\prime = a I_1; & Z_1^\prime = \dfrac{Z_1}{a^2} 
+                \end{array}
+            \]
+        </p>
+
+        <h2>
+            4. Straty v transformátore
+        </h2>
+
+        <p>
+            Ako bolo povedané, transformátor je definovaný ako netočivý stroj. Z toho vyplýva, že v tomto stroji budú vznikať straty v medi, straty v železe, prídavné straty a ako jediné sa neprejavia mechanické straty. 
+        </p>
+
+        <h3>
+            4.1 Straty v medi
+        </h3>
+
+        <p>
+            Straty v medi \( \Delta P_\mathrm{Cu} \) vznikajú prechodom elektrického prúdu vinutím transformátora. Veľkosť strát závisí od odporu vinutia a kvadrátu prechádzajúceho prúdu:
+
+            \[ \Delta P_\mathrm{Cu} = R I^2 \]
+
+            Vzniknuté teplo ohrieva vodiče. Teplota vodičov však nesmie prekročiť maximálnu dovolenú teplotu izolácie. V opačnom prípade hrozí jej poškodenie a vznik skratov. Elektrický stroj je navrhovaný na maximálnu hodnotu prúdu, pri prechode ktorého vinutím nedôjde k prehriatiu vodičov ani po nekonečne dlhej prevádzke stroja. Táto hodnota prúdu je udávaná na štítku stroja a nazýva sa nominálna hodnota prúdu. To isté platí aj o napätí.
+        </p>
+
+        <h3>
+            4.2 Straty v železe
+        </h3>
+
+        <p>
+            Straty v železe \( \Delta P_\mathrm{Fe} \) sú straty, ktoré vznikajú v magnetickom obvode transformátora. Tieto straty sa dalej delia na:
+        </p>
+        
+        <p>
+            <strong>Hysterézne straty</strong> \( \Delta P_\mathrm{h} \), ktoré vznikajú pri každom premagnetovaní, ktoré sú úmerné ploche hysteréznej slučky. Pretože straty vznikajú pri každom prechode hysteréznou slučkou, hysterézne straty sú závislé nielen od sýtenia materiálu, ale aj od frekvencie zmeny. Zníženie hysteréznych strát je možné použitím magnetických materiálov s čo najužšou hysteréznou slučkou.
+        </p>
+
+        <p>
+            <strong>Straty vírivými prúdmi</strong> \( \Delta P_\mathrm{v} \), ktoré vznikajú pri sýtení magnetického materiálu premenlivým magnetickým tokom. Pri sítení sa v ňom indukuje napätie. Toto je reakciou na zmenu magnetického poľa. Keďže magnetický materiál je elektricky vodivý, tak ním začnú pretekať prúdy, ktorým hovoríme vírivé prúdy. Obmedziť vírivé prúdu môžeme dvomi spôsobmi, a to skrátením ich dĺžky, tým že magnetický materiál bude vyrobený z elektricky izolovaných plechov, alebo zvýšením odporu feromagnetických plechov (zvýšením obsahu kremíka).
         </p>
 
         <h2>
@@ -182,7 +243,7 @@
         </h2>
 
         <p>
-
+            Na príkladoch sa intenzívne pracuje.
         </p>
 
         <h2>Doplnkové zdroje</h2>
