@@ -197,3 +197,13 @@ img {
     font-weight: bold;
     color: #cc4331;
 }
+
+.download {
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #cc4331;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
