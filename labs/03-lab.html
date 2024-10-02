@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,20 +40,123 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
-            <li>Určit straty transofmrátora, ktoré vznikajú pri prevádzke</li>
+            <li>Určiť straty transformátora, ktoré vznikajú pri prevádzke</li>
             <li>Vypočítať parametre náhradnej schémy transformátora</li>
             <li>Zistiť závislosť účinnosti od zaťaženia transformátora</li>
             <li>Zistiť závislosť ubytku napätia od zaťaženia transformátora</li>
-        </ul> -->
+        </ul>
+
+        <h2>
+            Určenie štítkových údajov transformátora
+        </h2>
+
+        <p>
+            Každý elektrický stroj ma svoj výrobný štítok na ktorom sú uvedené všetky dôležité údaje. Na tomto cvičení sa bude merať transformátor, ktorý má nasledujúci výrobný štítok.
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 75%;">
+                <img src = "../images/TR-nameplate.png"/>
+                <p><em>Výrobný štítok trojfázového transformátora</em></p>
+            </div>
+        </div>
+
+        <p>
+            Zo všetkých uvedených údajov nás najviac budú zaujímať nasledujúce údaje:
+            <ul>
+                <li><strong>Nominálny zdanlivý výkon</strong> \( S_\mathrm{N} \)</li>
+                <li><strong>Nominálne napätie primárnej strany</strong> \( U_\mathrm{1N} \) (združené napätie)</li> 
+                <li><strong>Nominálne napätie sekundárnej strany</strong> \( U_\mathrm{1N} \) (združené napätie)</li>
+            </ul>
+            Zo štítkových údajov je možné vypočítať aj nominálne prúdy transformátora pomocou nasledovných vzťahov:
+
+            \[ I_\mathrm{1N} = \dfrac{S_\mathrm{N}}{\sqrt{3} U_\mathrm{1N}} \]
+            \[ I_\mathrm{2N} = \dfrac{S_\mathrm{N}}{\sqrt{3} U_\mathrm{2N}} \]
+
+            <strong>Pozor!!!</strong> Tieto hodnoty prúdov by sa nemali prekračovať, pretože potom hrozí trvalé poškodenie transformátora.
+        </p>
+
+        <h2>
+            Meranie odporov vinutí
+        </h2>
+
+        <p>
+            Meranie odporov vinutí transformátora sa vykonáva pomocou miliohmetra. Je potrebné si uvedomiť, že transformátor má obe vinutia zapojené do hviezdy. Stred hviezdy nie je vyvedený, a preto sa merajú odporovy na svorkách. Avšak v takomto prípade sa merajú vždy dve vinutia naraz. Z toho dôvodu je potrebné nameraný odpor predeliť dvoma.
+        </p>
+
+        <h2>
+            Meranie prevodu transformátora
+        </h2>
+
+        <p>
+            Prevod transformátora sa meria v nezaťaženom stave (stave naprázdno), kedy nie je na sekundárnu stranu pripojená záťaž. Meranie sa vykonáva pri zníženom napätí aby sme sa vyhli oblasti nasítenia. Meranie sa odporúča vykonávať pri \(0{,}8\) násobku \( U_\mathrm{1N} \), čo je približne \( 304\,\mathrm{V} \). Po odmeraní primárneho a sekundárneho napätia je možné dopočítať prevod pomocou nasledujúceho vzťahu:
+            
+            \[ a = \dfrac{U_\mathrm{1}}{U_\mathrm{2}} \]
+        </p>
+
+        <h2>
+            Meranie transformátora naprázdno
+        </h2>
+
+        <p>
+            Pri meraní naprázdno je jedna strana transformátora rozpojená (netečie prúd). Na napájacej strane sa zo zdroja odoberá veľmi malý prúd, takzvaný prúd naprázdno \( I_0 \). Pri tomto meraní sa napája transformátor zo strany nižšieho napätia aby už tak malé prúdy boli väčšie. Pri meraní meriame napätia, prúdy a činné výkony všetkých troch fáz. 
+        </p>
+
+        <p>
+            Z merania naprázdno je možné určiť:
+            <ul>
+                <li><strong>Prúd naprázdno</strong> \( I_0 \)</li>
+                <li><strong>Straty v magnetickom obvode</strong> \( \Delta P_\mathrm{Fe} = \Delta P_0 \)</li>
+                <li><strong>Impedanciu naprázdno</strong> \( Z_0 \)</li>
+                <li><strong>Účinník naprázdno</strong> \( \cos \varphi_0 \)</li>
+                <li><strong>Magnetizačnú reaktanciu</strong> \( X_\mathrm{m} \)</li>
+                <li><strong>Ekvivalentný odpor strát v železe</strong> \( R_\mathrm{Fe} \)</li>
+            </ul>
+        </p>
+
+        <h2>
+            Meranie transformátora nakrátko
+        </h2>
+
+        <p>
+            pri meraní nakrátko je jedna strana transformátora skratovaná pomocou bezodporovou spojkou (tečie veľmi veľký prúd). Na napájacej strane sa zo zdroja odoberá skratový prúd, takzvaný prúd nakrátko \( I_\mathrm{k} \). Pri tomto meraní sa napája transformátor zo strany vyššieho napätia. Napájacie napätie je znížené tak, aby sa nepresiahol \(1{.}2\) násobok nominálneho prúdu. Pri meraní meriame napätia, prúdy a činné výkony všetkých troch fáz. 
+        </p>
+
+        <p></p>
+            Z merania naprázdno je možné určiť:
+            <ul>
+                <li><strong>Napätie nakrátko</strong> \( U_\mathrm{k} \)</li>
+                <li><strong>Straty v medi</strong> \( \Delta P_\mathrm{Cu} \)</li>
+                <li><strong>Účinník nakrátko</strong> \( \cos \varphi_\mathrm{k} \)</li>
+                <li><strong>Straty nakrátko</strong> \( \Delta P_\mathrm{k} \)</li>
+                <li><strong>Rozptylové reaktancie vinutí</strong> \( X_1; X_2 \)</li>
+            </ul>
+        </p>
+
+        <h2>
+            Vypracovanie refrátu
+        </h2>
+
+        <p>
+            Z merania je potrebné vypracovať referát a odovzdať ho cvičiacmu. K meraniu je možné si vytlačiť tabuľky ktoré sú potrebné pre meranie.
+        </p>
+
+        <p>
+            <a class="download" href="../files/TR_Meranie.pdf">Stiahnuť referát</a>
+
+            <a class="download" href="../files/TR_Tabulky.pdf">Stiahnuť tabuľky</a>
+        </p>
+
+        <h2>Doplnkové zdroje</h2>
+
+        <ul>
+            <li><a class="resource-link" href="https://www.youtube.com/watch?v=Ct7L4yDRsYc&list=PLaQ6pi88lJNuLUn-wafj5iioIEGzxC0WE&index=3">video</a> - <em>Meranie na transformátore</em></li>
+        </ul>
 
 
     </article>
