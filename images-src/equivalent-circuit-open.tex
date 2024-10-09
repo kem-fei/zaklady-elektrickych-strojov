@@ -26,7 +26,7 @@ to [short, -o, ] (10 , 3.5);
 to [short, o-,] (0.5 , 3.5)
 to [color=myColor, european resistor, l=$R_1$] (2 , 3.5)
 to [color=myColor, american inductor, l=$X_{1\sigma}$] (3.5 , 3.5)
-to [short, i=$i_\mathrm{oc}$, -*] (5 , 3.5);
+to [short, i=$i_\mathrm{0}$, -*] (5 , 3.5);
 
 %\draw (0.5 , 3.5) -- (3.5 , 3.5);
 
@@ -42,7 +42,7 @@ to [short, i=$i_\mathrm{oc}$, -*] (5 , 3.5);
 
 \ctikzset{voltage/bump b/.initial=0}
 
-\draw (0 , 3.5) to [open, european voltages, v>=$u_\mathrm{oc}$] (0 , 0);
+\draw (0 , 3.5) to [open, european voltages, v>=$u_\mathrm{0}$] (0 , 0);
 \draw[color=myColor] (10 , 3.5) to [color=myColor, open, european voltages, v^>=$\,u_2^\prime$] (10 , 0);
 \end{circuitikz}
 \end{document}

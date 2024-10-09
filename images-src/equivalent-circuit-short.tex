@@ -24,13 +24,13 @@
 to [short, o-,] (0.5 , 3.5)
 to [european resistor, l=$R_1$] (2 , 3.5)
 to [american inductor, l=$X_{1\sigma}$] (3.5 , 3.5)
-to [short, i=$i_\mathrm{sc}$, -*] (5 , 3.5);
+to [short, i=$i_\mathrm{1N}$, -*] (5 , 3.5);
 
 \draw[very thick] (10 , 3.5) -- (10 , 0);
 	 
 \draw (5 , 3.5)
-to [short, i=$i_\mathrm{sc}^\prime$, *-] (6.5 , 3.5)
-to [american inductor, l=$L_{2\sigma}^\prime$] (8 , 3.5)
+to [short, i=$i_\mathrm{2N}^\prime$, *-] (6.5 , 3.5)
+to [american inductor, l=$X_{2\sigma}^\prime$] (8 , 3.5)
 to [european resistor, l=$R_2^\prime$] (9.5 , 3.5)
 to [short, -o, ] (10 , 3.5);
 
@@ -43,7 +43,7 @@ to [short, -o, ] (10 , 3.5);
 
 \ctikzset{voltage/bump b/.initial=0}
 
-\draw (0 , 3.5) to [open, european voltages, v>=$u_\mathrm{sc}$] (0 , 0);
+\draw (0 , 3.5) to [open, european voltages, v>=$u_\mathrm{k}$] (0 , 0);
 \draw[color=white!100] (10 , 3.5) to [color=white!100, open, european voltages, v^>=$\,u_2^\prime$] (10 , 0);
 \draw[very thick] (10 , 3.0) -- (10 , 0.5);
 \end{circuitikz}
