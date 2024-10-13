@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,26 +40,53 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
-            <li></li>
-            <li></li>
+            <li>Pochopiť princíp činnosti synchrónneho stroja</li>
+            <li>Pochopiť náhradnej schéme synchrónneho stroja</li>
+            <li>Prepočítať príklady pre synchrónny stroj</li>
         </ul>
 
-
         <h2>
-            Princíp činnosti synchrónneho stroja
+            1. Čo je to synchrónny stroj?
         </h2>
 
         <p>
+            Synchrónny generátor je prvý točivý elektrický stroj, ktorý si preberieme. Keďže sa jedná o točivý stroj, bude pozostávať z dvoch hlavných častí. Prvá časť, ktorá je statická, sa nazýva <strong>stator</strong>. Druh časť, ktorá sa otáča, sa nazýva <strong>rotor</strong>. Tomuto stroju sa hovorí synchrónny preto, lebo rotor sa točí rovnakou uhlovou rýchlosťou ako točivé magnetické pole v statore. Hovoríme, že rotor a magnetické pole statora su v synchronizme. Tento stroj môže pracovať aj ako motor aj ako generátor. Generátory majú v energetike značnú prevahu, nakoľko sa používajú ako generátory vo veľkých jadrových, vodných či tepelných elektrárňach. Synchrónny stroj neoddeliteľnou súčasťou moderného sveta. Rozoznávame dva druhy synchrónnych generátorov:
+
+            <ul>
+                <li><strong>Hydrogenerátor</strong> - je synchrónny generátor, ktorý má rotor s vyniklými pólmi. Dosahuje nízke otáčky a nízke odstredivé sily. Konštrukčne sa jedná o široké a krátke stroje.</li>
+                <li><strong>Turbogenerátor</strong> - je synchrónny generátor, ktorý má hladký rotor. Dosahuje vysoké otáčky a vysoké odstredivé sily. Konštrukčne sa jedná o úzke a dlhé stroje.</li>
+            </ul>
+
+            Pre lepšiu predstavu toho ako vyzerá hydrogenerátor a turbogenerátor je možné prezriet si fotografie synchrónnych strojov v <a class="link-in-text" href="../gallery/02-gallery-synchronus-generator.html">galérii synchrónnych strojov</a>.
+        </p>
+
+        <h2>
+            2. Princíp činnosti synchrónneho stroja
+        </h2>
+
+        <p>
+            Pripojením trojfázovej siete k statoru preteká statorom prúd, ktorý vytvára v statore točivé magnetické pole. Rotor funguje ako magnet so severným a južným pólom, ktorý môže byť vytvorený buď elektromagnetom, alebo permanentným magnetom. Rotor sa "prilepí" k točivému magnetickému poľu statora, čím sa dosiahnu synchrónne otáčky. Na vytvorenie elektromagnetu v rotore je potrebné aby bol rotor napájaný jednosmerným prúdom. Napájanie sa dostane do rotora cez krúžky a kefy, pričom sú potrebné dva krúžky pre kladný a záporný pôl zdroja. Rýchlosť stroja závisí od frekvencie siete a počtu pólov:
             
+            \[ n_\mathrm{s} = \dfrac{120 \cdot f}{p} \]
+
+            kde
+
+            <ul style="list-style-type: none;">
+                <li>\( n_\mathrm{s} \) sú synchrónne otáčky</li>
+                <li>\( p \) je počet párov pólov</li>
+                <li>\( f \) je frekvencia siete</li>
+            </ul>
+            
+            Na rozbeh synchrónneho motora je potrebné roztočiť stroj na synchrónne. To je možné realizovať dvoma spôsobmi. Prvým spôsobom je roztočiť stroj na synchrónne otáčky pomocou iného pohonu alebo použiť frekvenčný menič a postupne zvyšovať frekvenciu až na synchrónnu hodnotu. Pri zaťažovaní synchrónneho stroja sa otáčky nemenia, mení sa však záťažný uhol. Synchrónny stroj nemožno zaťažovať donekonečna. V určitom bode zaťaženia môže vypadnúť zo synchronizmu.
+        </p>
+
+        <p>
+            Pre lepšie pochopenie činnosti synchrónneho stroja odporúčame pozrieť si nasledujuce video.
         </p>
 
         <div class="video-container">   
@@ -69,14 +97,65 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
                 allowfullscreen
             ></iframe>
-        </div> 
+        </div>
+
+        <h2>
+            3. Náhradná schéma synchrónneho stroja
+        </h2>
+
+        <p>
+            Náhradná schéma synchrónneho stroja je dôležitý model, ktorý sa používa na analýzu a simuláciu správania synchrónnych generátorov a motorov v elektrických sieťach. Tento model umožňuje jednoduchšie porozumieť elektrickým a magnetickým vlastnostiam stroja, ako aj jeho reakciám na rôzne prevádzkové stavy. Synchrónny stroj môže byť reprezentovaný elektrickým ekvivalentom pomocou niekoľkých základných prvkov:
+
+            <ul>
+                <li><strong>Odpor statora</strong> \( R_\mathrm{1} \)</li>
+                <li><strong>Synchrónna reaktancia statora</strong> \( X_\mathrm{s} \)</li>
+                <li><strong>Indukované napätie</strong> \( U_\mathrm{i} \)</li>
+            </ul>
+
+            Svorkové napätie \( U_\mathrm{UV} \) je možné určiť pomocou nasledujúceho vzťahu:
+
+            \[ U_\mathrm{UV} = U_\mathrm{i} + ( R_1 + j X_\mathrm{s} ) I_1 \]
+
+            Náhradná schéma trojfázového synchrónneho stroja je zobrazená na nasledujúcom obrázku.
+        </p>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L04-01-equivalent-circuit.png"/>
+                <p><em>Náhradná schéma jednofázového synchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L04-02-phasor-diagram.png"/>
+                <p><em>Fázorový diagram jednofázového synchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            4. Počítanie príkladov
+        </h2>
+
+        <p>
+            Na príkladoch sa intenzívne pracuje.
+        </p>
+
+        <!-- <p>
+            Na tomto mieste si môžete stiahnuť súbor potrebný pre výpočtové cvičenie. Súbor obsahuje prepočítané príklady, ktoré vám pomôžu pri riešení zadania a lepšom pochopení problematiky synchrónnych strojov. Heslo vám poskytne cvičiaci na cvičení.
+        </p>
+
+        <p>
+            <a class="download" href="../files/SS_Priklady.pdf">Stiahnuť príklady</a>
+        </p> -->
 
         <h2>Doplnkové zdroje</h2>
 
         <ul>
             <li><a class="resource-link" href="https://www.martinus.sk/823579-zaklady-elektrotechniky-i/kniha">kniha</a> - <em>Základy elektrotechniky I</em></li>
             <li><a class="resource-link" href="https://www.martinus.sk/823535-zaklady-elektrotechniky-ii/kniha">kniha</a> - <em>Základy elektrotechniky II</em></li>
-        </ul> -->
+            <li><a class="resource-link" href="https://www.youtube.com/watch?v=1XTAyfFChgM">video</a> - <em>Točivé magnetické pole</em></li>
+        </ul>
 
     </article>
 
