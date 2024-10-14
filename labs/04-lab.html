@@ -46,7 +46,7 @@
 
         <ul>
             <li>Pochopiť princíp činnosti synchrónneho stroja</li>
-            <li>Pochopiť náhradnej schéme synchrónneho stroja</li>
+            <li>Porozumieť náhradnej schéme synchrónneho stroja</li>
             <li>Prepočítať príklady pre synchrónny stroj</li>
         </ul>
 
@@ -55,11 +55,11 @@
         </h2>
 
         <p>
-            Synchrónny generátor je prvý točivý elektrický stroj, ktorý si preberieme. Keďže sa jedná o točivý stroj, bude pozostávať z dvoch hlavných častí. Prvá časť, ktorá je statická, sa nazýva <strong>stator</strong>. Druh časť, ktorá sa otáča, sa nazýva <strong>rotor</strong>. Tomuto stroju sa hovorí synchrónny preto, lebo rotor sa točí rovnakou uhlovou rýchlosťou ako točivé magnetické pole v statore. Hovoríme, že rotor a magnetické pole statora su v synchronizme. Tento stroj môže pracovať aj ako motor aj ako generátor. Generátory majú v energetike značnú prevahu, nakoľko sa používajú ako generátory vo veľkých jadrových, vodných či tepelných elektrárňach. Synchrónny stroj neoddeliteľnou súčasťou moderného sveta. Rozoznávame dva druhy synchrónnych generátorov:
+            Synchrónny stroj je prvý točivý elektrický stroj, ktorý si preberieme. Keďže sa jedná o točivý stroj, bude pozostávať z dvoch hlavných častí. Prvá časť, ktorá je statická, sa nazýva <strong>stator</strong>. Druh časť, ktorá sa otáča, sa nazýva <strong>rotor</strong>. Tomuto stroju sa hovorí synchrónny preto, lebo rotor sa točí rovnakou uhlovou rýchlosťou ako točivé magnetické pole v statore. Hovoríme, že rotor a magnetické pole statora su v synchronizme. Tento stroj môže pracovať aj ako motor aj ako generátor. Generátory majú v energetike značnú prevahu, nakoľko sa používajú ako generátory vo veľkých jadrových, vodných či tepelných elektrárňach. Synchrónny stroj je neoddeliteľnou súčasťou moderného sveta. Rozoznávame dva druhy synchrónnych generátorov:
 
             <ul>
-                <li><strong>Hydrogenerátor</strong> - je synchrónny generátor, ktorý má rotor s vyniklými pólmi. Dosahuje nízke otáčky a nízke odstredivé sily. Konštrukčne sa jedná o široké a krátke stroje.</li>
-                <li><strong>Turbogenerátor</strong> - je synchrónny generátor, ktorý má hladký rotor. Dosahuje vysoké otáčky a vysoké odstredivé sily. Konštrukčne sa jedná o úzke a dlhé stroje.</li>
+                <li><strong>Hydrogenerátor</strong> - je synchrónny generátor, ktorý má rotor s vyniklými pólmi. Pracuje pri malých otáčkach, a preto tam vznikajú malé odstredivé sily. Konštrukčne sa jedná o široké (veľký priemer) a krátke stroje.</li>
+                <li><strong>Turbogenerátor</strong> - je synchrónny generátor, ktorý má hladký rotor. Pracuje pri vysokých otáčkach, a preto tam vznikajú veľké odstredivé sily. Konštrukčne sa jedná o úzke (malý priemer) a dlhé stroje.</li>
             </ul>
 
             Pre lepšiu predstavu toho ako vyzerá hydrogenerátor a turbogenerátor je možné prezriet si fotografie synchrónnych strojov v <a class="link-in-text" href="../gallery/02-gallery-synchronus-generator.html">galérii synchrónnych strojov</a>.
@@ -70,19 +70,20 @@
         </h2>
 
         <p>
-            Pripojením trojfázovej siete k statoru preteká statorom prúd, ktorý vytvára v statore točivé magnetické pole. Rotor funguje ako magnet so severným a južným pólom, ktorý môže byť vytvorený buď elektromagnetom, alebo permanentným magnetom. Rotor sa "prilepí" k točivému magnetickému poľu statora, čím sa dosiahnu synchrónne otáčky. Na vytvorenie elektromagnetu v rotore je potrebné aby bol rotor napájaný jednosmerným prúdom. Napájanie sa dostane do rotora cez krúžky a kefy, pričom sú potrebné dva krúžky pre kladný a záporný pôl zdroja. Rýchlosť stroja závisí od frekvencie siete a počtu pólov:
+            Pripojením trojfázovej siete k statoru preteká statorom prúd, ktorý vytvára v statore točivé magnetické pole. Rotor funguje ako magnet so severným a južným pólom, ktorý môže byť vytvorený buď elektromagnetom alebo permanentným magnetom. Rotor sa "prilepí" k točivému magnetickému poľu statora, čím sa dosiahnu synchrónne otáčky. Na vytvorenie elektromagnetu v rotore je potrebné, aby bol rotor napájaný jednosmerným prúdom. Napájanie sa dostane do rotora cez krúžky a kefy, pričom sú potrebné dva krúžky, pre kladný a záporný pôl zdroja. Rýchlosť stroja závisí od frekvencie siete a počtu pólov:
             
-            \[ n_\mathrm{s} = \dfrac{120 \cdot f}{p} \]
+            \[ n_\mathrm{s} = \dfrac{60 \cdot f}{p} = \dfrac{120 \cdot f}{2p} \]
 
             kde
 
             <ul style="list-style-type: none;">
                 <li>\( n_\mathrm{s} \) sú synchrónne otáčky</li>
                 <li>\( p \) je počet párov pólov</li>
+                <li>\( 2p \) je počet pólov</li>
                 <li>\( f \) je frekvencia siete</li>
             </ul>
             
-            Na rozbeh synchrónneho motora je potrebné roztočiť stroj na synchrónne. To je možné realizovať dvoma spôsobmi. Prvým spôsobom je roztočiť stroj na synchrónne otáčky pomocou iného pohonu alebo použiť frekvenčný menič a postupne zvyšovať frekvenciu až na synchrónnu hodnotu. Pri zaťažovaní synchrónneho stroja sa otáčky nemenia, mení sa však záťažný uhol. Synchrónny stroj nemožno zaťažovať donekonečna. V určitom bode zaťaženia môže vypadnúť zo synchronizmu.
+            Na rozbeh synchrónneho motora je potrebné roztočiť stroj na synchrónne otáčky. To je možné realizovať dvoma spôsobmi. Prvým spôsobom je roztočiť stroj na synchrónne otáčky pomocou iného pohonu. Druhý spôsob je použiť frekvenčný menič a postupne zvyšovať frekvenciu až na synchrónnu hodnotu. Pri zaťažovaní synchrónneho stroja sa otáčky nemenia, mení sa však záťažný uhol. Synchrónny stroj nemožno zaťažovať donekonečna. V určitom bode zaťaženia môže vypadnúť zo synchronizmu.
         </p>
 
         <p>
@@ -112,9 +113,9 @@
                 <li><strong>Indukované napätie</strong> \( U_\mathrm{i} \)</li>
             </ul>
 
-            Svorkové napätie \( U_\mathrm{UV} \) je možné určiť pomocou nasledujúceho vzťahu:
+            Svorkové napätie \( U_\mathrm{1} \) je možné určiť pomocou nasledujúceho vzťahu:
 
-            \[ U_\mathrm{UV} = U_\mathrm{i} + ( R_1 + j X_\mathrm{s} ) I_1 \]
+            \[ U_\mathrm{1} = U_\mathrm{i} + ( R_1 + j X_\mathrm{s} ) I_1 \]
 
             Náhradná schéma trojfázového synchrónneho stroja je zobrazená na nasledujúcom obrázku.
         </p>
