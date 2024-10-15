@@ -1,0 +1,62 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = sk_SK
+% !TeX TS-program = pdflatex
+
+\documentclass[convert=pdf2svg]{standalone}
+\usepackage[slovak]{babel}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[mathcal]{eucal}
+
+\definecolor{myGreen}{RGB}{0, 0, 0}
+\definecolor{myRed}{RGB}{0, 0, 0}
+
+\usetikzlibrary{decorations.pathreplacing, calligraphy}
+
+\begin{document}
+\begin{tikzpicture}[scale=4]
+\draw ( 0.0 , -1.2) -- (0.0 , 1.2) node [below left]{$\mathcal{R}e$};
+\draw (-1.2 ,  0.0) -- (1.2 , 0.0) node [below left]{$\mathcal{I}m$};
+
+\draw[very thick, -stealth, myRed] (0.00, 0.00) -- (0.00, -0.80);
+\draw (0.00, -0.80) node [left] {\textsf{SG Id. b.}}; 
+\draw (0.00, -0.70) node [left] {\textsf{P$\uparrow$ Q=0}};
+
+\draw[very thick, -stealth, myRed] (0.00, 0.00) -- (0.69,  0.40);
+\draw (0.69,  0.40) node [below right] {$\mathbf{\bar{I}}_\mathrm{1N}$};
+\draw (0.69,  0.50) node [above right] {\textsf{SM Podb.}}; 
+\draw (0.69,  0.40) node [above right] {\textsf{P$\downarrow$ Q$\downarrow$}};
+
+\draw[very thick,  -stealth, myRed] (0.00, 0.00) -- (-0.69, -0.40);
+\draw (-0.69, -0.40) node [below left] {\textsf{SG Preb.}}; 
+\draw (-0.69, -0.50) node [below left] {\textsf{P$\uparrow$ Q$\uparrow$}};
+
+\draw[very thick, -stealth, myRed] (0.00, 0.00) -- (0.69, -0.40);
+\draw (0.69, -0.40) node [below right] {\textsf{SG Podb.}}; 
+\draw (0.69, -0.50) node [below right] {\textsf{P$\uparrow$ Q$\downarrow$}};
+
+\draw[very thick, -stealth, myRed] (0.00, 0.00) -- (-0.69,  0.40);
+\draw (-0.69, 0.50) node [above left] {\textsf{SM Preb.}}; 
+\draw (-0.69, 0.40) node [above left] {\textsf{P$\downarrow$ Q$\uparrow$}};
+
+\draw[very thick, -stealth, myGreen] (-0.01, 0.00) -- (-0.01,  1.00);
+\draw (-0.01,  1.00) node [below left] {$\mathbf{\bar{U}}_1$};
+
+\draw [thick, -stealth] (0.00 , 0.25) arc (90:-150:0.25);
+\draw [very thick] (-0.08 , -0.15) node {$\varphi$};
+
+\draw[very thick, -stealth, myRed] (0.01, 0.00) -- (0.01,  0.80);
+\draw (0.01,  0.80) node [right] {\textsf{SM Id. b.}}; 
+\draw (0.01,  0.70) node [right] {\textsf{P$\downarrow$ Q=0}};
+
+\draw [draw = black, fill = black] (-1.1 , 0.0) circle (0.01);
+\draw [-stealth] (-1.1 , 0.0) -- (-1.1 ,  0.15) node [above] {$\mathsf{P_{MOT}}$};
+\draw [-stealth] (-1.1 , 0.0) -- (-1.1 , -0.15) node [below] {$\mathsf{P_{GEN}}$};
+
+\draw [draw = black, fill = black] (0.0 , -1.1) circle (0.01);
+\draw [-stealth] (0.0 , -1.1) -- (0.15 , -1.1)  node [right] {$\mathsf{Q_{IND}}$};
+\draw [-stealth] (0.0 , -1.1) -- (-0.15 , -1.1) node [left]  {$\mathsf{Q_{KAP}}$};
+
+\end{tikzpicture}
+\end{document}
