@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,47 +40,104 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
             <li>Odmerať odpory vinutí synchrónneho stroja</li>
-            <li>Odmerať charakteristiky naprázdno a nakrátko</li>
-            <li>Určiť parametre náhradnej schémy synchrónneho stroja</li>
+            <li>Odmerať charakteristiku naprázdno</li>
+            <li>Odmerať charakteristiku nakrátko</li>
         </ul> 
-        
-        
-               <h2>
-            4. Pripojovanie na tvrdu sieť
-        </h2> 
+
+        <h2>
+            Určenie štítkových údajov synchrónneho stroja
+        </h2>
 
         <p>
-            Pre paralelné pripojenie synchrónneho generátora na spoločnú sieť musia byť okamžité hodnoty napätí siete a napätí generátora zhodné. V opačnom prípade môže dôjsť k prúdovým nárazom, ktoré vyvolajú momentové nárazy. Tieto môžu následne spôsobiť mechanické poškodenie stroja. Generátor môžeme pripojiť do siete, len pri splnení nasledovných podmienok:
-            <ul>
-                <li>Rovnosť frekvencie napätia siete a stroja.</li>
-                <li>Rovnosť efektívnych hodnôt napätí a siete</li>
-                <li>Rovnosť sledu fáz napätí siete a stroja.</li>
-                <li>Nulový fázový posun medzi napäťovým systémom siete a stroja</li>
-            </ul>
+            Každý elektrický stroj ma svoj výrobný štítok, na ktorom sú uvedené všetky dôležité údaje. Na tomto cvičení sa bude merať synchrónny stroj, ktorý má vo výrobnom štítku uvedené tieto údaje:
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 75%;">
+                <img src = "../images/L05-01-nameplate.png"/>
+                <p><em>Výrobný štítok synchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Meranie odporov viutí synchrónneho stroja
+        </h2>
+
+        <p>
+            Odpory vinutí meriame miliohmmetrom. Statorové vinutia meriame na svorkovnici voči nulovému bodu. Rotorové vinutie je vyvedené na napájacie svorky stroja. Rotor je so svorkami prepojený pomocou krúžkov a kief, ktoré zvyšujú odpor rotora. Z toho dôvodu je lepšie odmerať odpor rotora priamo na krúžkoch rotora.
+        </p>
+        
+        <h2>
+            Meranie synchrónneho stroja naprázdno
+        </h2>
+
+        <p>
+            V chode naprázdno meriame stroj v generátorickom stave. Meraním získame charakteristiku naprázdno \( U_0 = f(I_2)\). Meriame v prvom kvadrante. Rotor synchrónneho stroja roztočíme jednosmerným motorom na synchrónnu uhlovú rýchlosť. Budiaci prúd stroja meníme od nuly do hodnoty odpovedajúcej približne indukovanému napätiu \( 1{,}2\,U_\mathrm{N} \). Pre každú hodnotu budiaceho prúdu odčítame indukované napätie a moment na hriadeli.
+        </p>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L05-02-open-test.svg"/>
+                <p><em>Schéma zapojenia pri meraní synchrónneho stroja naprázdno</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Meranie synchrónneho stroja nakrátko
+        </h2>
+
+        <p>
+            Pri meraní nakrátko statorové vinutie synchónneho stroja skratujeme tromi ampérmetrami. Rotor synchrónneho stroja otáčame dynamometrom rýchlosťou \( \omega_\mathrm{s} \). Postupne zvyšujeme prúd budiaceho vinutia \( I_2 \) až do hodnoty odpovedajúcej \( I_\mathrm{1k} \approx 1{,}2\,I_\mathrm{1N} \). Súčasne odčítame moment dynamometra.
+        </p>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L05-03-close-test.svg"/>
+                <p><em>Schéma zapojenia pri meraní synchrónneho stroja nakrátko</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Vypracovanie refrátu
+        </h2>
+
+        <p>
+            Z merania je potrebné vypracovať referát a odovzdať ho cvičiacmu. K meraniu je možné vytlačiť si tabuľky, ktoré sú potrebné pre meranie.
+        </p>
+
+        <p>
+            <a class="download" href="../files/SS_Meranie.pdf">Stiahnuť referát</a>
+
+            <a class="download" href="../files/SS_Tabulky.pdf">Stiahnuť tabuľky</a>
         </p>
 
         <h2>
-            5. Zaťažovanie synchrónneho stroja
+            Odovzdávanie refrátu
         </h2>
 
-        <h2>
-            6. Prevádzkové stavy synchrónneho stroja
-        </h2>
+        <p>
+            Vypracovaný referát je potrebné odovzdať cvičiacemu v dohodnutom termíne. Podmienky pre správne odovzdanie zadania:
+            <ul>
+                <li>Zadanie je vypracované v apalikácii <a class="resource-link" href="../xournal.html">Xournal++</a> v1.2.3.</li>
+                <li>Zadanie je odovzdané v archíve s názvom <strong>SS-Priezvisko-Meno.zip</strong> ktorý obsahuje:</li>
+                <ul>
+                    <li>Súbor v natívnom formáte - SS-Priezvisko-Meno.xopp</li>
+                    <li>Súbor v PDF formáte - SS-Priezvisko-Meno.pdf</li>
+                </ul>
+            </ul>
 
-        
-        -->
+            Ak tieto podmienky nebudu splnené, zadanie sa považuje na <strong>neodovzdané</strong>. V prípade dohody s cvičiacim je možné odovzdať referát aj v <strong>papierovej forme</strong>.
+        </p>
 
-
+        <p>
+            &nbsp;  
+        </p>
 
     </article>
 

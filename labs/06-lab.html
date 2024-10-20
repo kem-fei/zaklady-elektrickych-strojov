@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,19 +40,119 @@
 
     <article>
 
-
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
             <li>Pripojiť synchrónny stroj na sieť.</li>
             <li>Vyšetriť možné prevádzkové stavy synchrónneho stroja.</li>
-        </ul> -->
+            <li>Zistiť ako sa správa synchrónny stroj pri zatažení.</li>
+        </ul>
+
+        <h2>
+            Pripojovanie na tvrdu sieť
+        </h2> 
+
+        <p>
+            Pre paralelné pripojenie synchrónneho generátora na spoločnú sieť musia byť okamžité hodnoty napätí siete a napätí generátora zhodné. V opačnom prípade môže dôjsť k prúdovým nárazom, ktoré vyvolajú momentové nárazy. Tieto môžu následne spôsobiť mechanické poškodenie stroja. Generátor môžeme pripojiť do siete, len pri splnení nasledovných podmienok:
+            <ul>
+                <li>Rovnosť frekvencie napätia siete a stroja.</li>
+                <li>Rovnosť efektívnych hodnôt napätí a siete</li>
+                <li>Rovnosť sledu fáz napätí siete a stroja.</li>
+                <li>Nulový fázový posun medzi napäťovým systémom siete a stroja</li>
+            </ul>
+        </p>
+
+        <div class="figure" style="width: 70%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L06-01-on-grid.svg"/>
+                <p><em>Schéma zapojenia synchrónneho stroja pri fázovaní</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Zaťažovanie synchrónneho stroja
+        </h2>
+
+        <p>
+            Záťažové charakteristiky (V - krivky, tiež Mordey-ove krivky) sú závislosti prúdu statora \( I_1 \) od budiaceho rotorového prúdu \( I_2 \), pri konštantnom napätí, frekvencii a výkone.
+        </p>
+
+        <div class="figure" style="width: 60%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L06-02-moordey.svg"/>
+                <p><em>Záťažové charakteristiky synchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Prevádzkové stavy synchrónneho stroja
+        </h2>
+
+        <p>
+            Po pripojení synchrónneho stroja na sieť môžeme vyšetrovať jeho chovanie v jednotlivých režimoch. Podľa chodu môžeme rozdeliť na:
+            <ul>
+                <li><strong>Generátorický chod</strong> - dodáva do siete činný výkon \( \mathrm{P}\uparrow  \)</li>
+                <li><strong>Motorický chod</strong> - odoberá zo siete činný výkon \( \mathrm{P}\downarrow \)</li>
+            </ul>
+        </p>
+
+        <p>
+            Podľa budenia môžeme rozdeliť na:
+            <ul>
+                <li><strong>Prebudený</strong> - dodáva do siete jalový výkon \( \mathrm{Q}\uparrow  \)</li>
+                <li><strong>Ideálne budený</strong> - jalový výkon je rovný nule \( \mathrm{Q} = 0 \)</li>
+                <li><strong>Podbudený</strong> - odoberá zo siete jalový výkon \( \mathrm{Q}\downarrow \)</li>
+            </ul>
+        </p>
+
+        <p>
+            Synchrónny kompenzátor je silne prebudzovaný nezaťažený synchrónny motor. Kompenzuje účinník siete, tým že dodáva do siete jalový výkon.
+        </p>
+
+        <div class="figure" style="width: 70%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L04-03-working-states.svg"/>
+                <p><em>Prevádzkové stavy synchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Vypracovanie refrátu
+        </h2>
+
+        <p>
+            Z merania je potrebné vypracovať referát a odovzdať ho cvičiacmu. K meraniu je možné vytlačiť si tabuľky, ktoré sú potrebné pre meranie.
+        </p>
+
+        <p>
+            <a class="download" href="../files/SS_Meranie.pdf">Stiahnuť referát</a>
+
+            <a class="download" href="../files/SS_Tabulky.pdf">Stiahnuť tabuľky</a>
+        </p>
+
+        <h2>
+            Odovzdávanie refrátu
+        </h2>
+
+        <p>
+            Vypracovaný referát je potrebné odovzdať cvičiacemu v dohodnutom termíne. Podmienky pre správne odovzdanie zadania:
+            <ul>
+                <li>Zadanie je vypracované v apalikácii <a class="resource-link" href="../xournal.html">Xournal++</a> v1.2.3.</li>
+                <li>Zadanie je odovzdané v archíve s názvom <strong>SS-Priezvisko-Meno.zip</strong> ktorý obsahuje:</li>
+                <ul>
+                    <li>Súbor v natívnom formáte - SS-Priezvisko-Meno.xopp</li>
+                    <li>Súbor v PDF formáte - SS-Priezvisko-Meno.pdf</li>
+                </ul>
+            </ul>
+
+            Ak tieto podmienky nebudu splnené, zadanie sa považuje na <strong>neodovzdané</strong>. V prípade dohody s cvičiacim je možné odovzdať referát aj v <strong>papierovej forme</strong>.
+        </p>
+
+        <p>
+            &nbsp;  
+        </p>
 
     </article>
 
