@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,27 +40,49 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
-            <li></li>
-            <li></li>
+            <li>Pochopiť princíp činnosti asynchrónneho stroja</li>
+            <li>Porozumieť náhradnej schéme asynchrónneho stroja</li>
+            <li>Prepočítať príklady pre asynchrónny stroj</li>
         </ul>
 
-
         <h2>
-            Princíp činnosti asynchrónneho stroja
+            1. Čo je to asynchrónny stroj?
         </h2>
 
         <p>
-           
+            Asynchrónny stroj je najrozšírenejší striedavý elektrický stoj, ktorý je niekedy označovaný aj ako indukčný stroj. Ako každý točivý elektrický stroj dokáže meniť elektrickú energiu na mechanickú a naopak. Najčastejšie sa však používa ako motor.
         </p>
+
+        <p>
+            Čo sa týka konštrukcie, asynchrónny stroj sa skladá klasicky zo statora a rotora. Stator je v tomto stroji, čo sa týka konštrukcie, identický ako v synchrónnom stroji. Magnetický obvod je zložený z plechov a v drážkach je umiestené najčastejšie trojfázové vinutie. Rotor môže byť konštrukčne vyhotovený buď ako rotor s vinutou kotvou (krúžkový rotor), alebo ako rotor s kotvou nakrátko (klietkový rotor).
+
+            <ul>
+                <li><strong>Asynchrónny stroj s kotvou nakrátko</strong> - kotva nakrátko je pre veľké motory vyhotovená z medených tyčí, ktoré sú na čelách skratované. Vytvárajú tak tvar klietky. Malé motory majú kotvy nakrátko vyhotovené z hliníka liatím, kde pri odlievaní sa na jednej strane obvykle vytvoria aj lopatky ventilátora.</li>
+                <li><strong>Asynchrónny stroj s vinutou kotvou</strong> - v magnetickom obvode rotora je v drážkach umiestnené trojfázové vinutie spojené do hviezdy. Konce vinutia sú pripojené na medené krúžky. Z krúžkov je vinutie pomocou uhlíkového zberača vyvedené na svorkovnicu. Na rotor môžeme takto pripájať spúšťacie odpory, alebo iným spôsobom riadiť prúd kotvy. Z toho dôvodu je aj pomenovanie krúžková kotva. </li>
+            </ul>
+        </p>
+
+        <p>
+            Pre lepšiu predstavu toho ako vyzerá asynchrónny stroj s kotvou nakrátko a s vinutou kotvou je možné prezriet si fotografie asynchrónnych strojov v <a class="link-in-text" href="../gallery/03-gallery-asynchronus-motor.html">galérii asynchrónnych strojov</a>.
+        </p>
+
+        <h2>
+            2. Princíp činnosti asynchrónneho stroja
+        </h2>
+
+        <p>
+           Pripojením trojfázového napätia na stator trojfázového stroja začne vinutiami pretekať prúd, vďaka čomu vznikne v statore točivé magnetické pole. Majme rotor s krúžkovou kotvou, ktorú necháme na svorkovnici rozpojenú. V rotore tak máme rovnako rozložené trojfázové vinutie zapojené do hviezdy. Statorové otáčavé magnetické pole bude presekávať rotorové cievky a bude v nich indukovať napätie. Hodnota indukovaného napätia bude daná prevodom tak, ako pri transformátore. Ak na rotorovú svorkovnicu pripojíme záťažové odpory alebo ich len skratujeme, potom vplyvom indukovaného napätia v rotore začne tiecť rotorom prúd. V rotore tak vznikne ďalšie točivé magnetické pole. Pôsobením týchto dvoch magnetických polí sa rotor začne otáčať (Lenzov zákon). V prípade, že by sa rotor asynchrónneho stroja otáčal synchrónnymi otáčkami, prestalo by presekávanie statorového rotačného magnetického poľa rotorovými cievkami, čím by sa zastavilo indukovanie napätia v rotore, a tým aj tok prúdu. Zanikol by moment stroja, ktorý by sa ďalej otáčal iba zotrvačnosťou. Na to aby mal stroj moment, a mohol vykonávať prácu musía byť otáčky menšie/väčšie ako synchrónne (asynchrónne otáčky).  
+        </p>
+
+        <p>
+            Pre lepšie pochopenie činnosti asynchrónneho stroja odporúčame si pozrieť nasledujuce video.
+        </p>
+
 
         <div class="video-container">   
             <iframe class="video"   
@@ -73,14 +96,99 @@
         </div>
 
 
+        <h2>
+            3. Náhradná schéma asynchrónneho stroja
+        </h2>
 
+        <p>
+            Ako sme už spomenuli, asynchrónny stroj je v podstate veľmi podobný transformátoru. Preto aj náhradná schéma pre asynchrónny motor je veľmi podobná náhradnej schéme transformátora. Všetky odpory a reaktancie sa modelujú rovnako až na odpor v rotore, ktorý je navyše predelený sklzom \( R_2^\prime / s \). Zahrnutie tejto veličiny v náhradnej schéme:
+            <ul>
+                <li>Modeluje efektívne straty v rotore asynchrónneho stroja pri rôznych hodnotách sklzu.</li>
+                <li>Zabezpečuje, aby bol prenášaný výkon asynchrónneho stroja správne rozdelený na tepelné straty a mechanický výkon.</li>
+                <li>Dáva možnosť analyzovať asynchrónny stroj v rôznych prevádzkových stavoch (od nulového sklzu po maximálny sklz).</li>
+            </ul>
+        </p>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L07-01-equivalent-circuit.png"/>
+                <p><em>Náhradná schéma jednofázového asynchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            4. Momentová charakteristika asynchrónneho stroja            
+        </h2>
+
+        <p>
+            Na nasledujúcom obrázku je zobrazená momentová charakteristika asynchrónneho stroja. Zvyslá os (os y) zobrazuje elektromagnetický moment asynchrónneho stroja. Vodorovná os (os x) zobrazuje mechanickú rýchlosť, resp. sklz asynchrónneho stroja. Oblasť v intervale \( s = (0,1) \) odpovedá motorickému chodu. Sklz \( s > 1 \) odpovedá brzdnej a \( s < 0 \) generátorovej prevádzke asynchrónneho stroja. Priebeh elektromagnetického momentu má dva extrémy. Maximálny moment v motorickej prevádzke, nazývaný aj moment zvratu, a maximálny moment v generátorovej prevádzke.
+        </p>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L07-02-momentova-charakteristika.png"/>
+                <p><em>Momentová charakteristika asynchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            5. Rozbeh asynchrónneho motora 
+        </h2>
+
+        <p>
+            Rozbeh asynchrónneho motora je prechodný dej počas ktorého sa mení jeho rýchlosť, moment a prúd. V okamihu pripojenia asynchrónneho motora na sieť sa tento správa ako transformátor nakrátko. V tomto momente preteká motorom záberový prúd obmedzený v okamihu rozbehu len impedanciou nakrátko. Tento pri priamom pripojení na sieť býva pri motoroch s kotvou nakrátko 4 až 7 násobok menovitého prúdu.
+
+            <ul>
+                <li>Rozbeh priamym pripojením na sieť (stroje do 3 kW)</li>
+                <li>Rozbeh zmenou napájacieho napätia (hviezda-trojuholník)</li>
+                <li>Soft štart pomocou frekvenčných meničov</li>
+            </ul>
+        </p>
+
+        <h4>
+            Rozbeh zmenou napájacieho napätia
+        </h4>
+        
+        <p>
+            Týmto spôsobom sa rozbiehajú najmä asynchrónne motory s kotvou nakrátko. Najjednoduchší spôsob zmeny napájacieho napätia je prepínanie hviezda-trojuholník. Statorové vinutie motora je vyvedené na svorkovnicu, tak ako je to uvedené na obrázku.
+        </p>
+
+        <div class="figure", style="width: 70%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L07-03-zapojenie-vinuti.png"/>
+                <p><em>Zapojenie vinutia na svorkovnici asynchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <p>
+            Motor sa rozbieha pri zapojení do hviezdy. Vtedy je napätie jednej fázy \(U_\mathrm{Y} = 230\, \mathrm{V}\). Po rozbehu a poklese prúdu sa vinutie prepne do trojuholníka a hodnota jeho fázového napätia stúpne na \(U_\Delta = \sqrt{3} U_\mathrm{Y} = 400\,\mathrm{V}\). Prúd v trojuholníku je oproti hviezde o \( \sqrt{3} \) väčší, no moment je v trojuholníku oproti hviezde trojnásobný. Moment prepnutia sa volí tak, aby sa dosiahol čo najväčší dynamický moment, ale aby prúd neprekročil hodnotu prúdu nakrátko v zapojení do hviezdy. Týmto sposobom sa rozbiehajú motory s výkonom od \( 3\,\mathrm{kW} \) do \( 10\,\mathrm{kW} \).
+        </p>
+
+        <div class="figure">
+            <div class="figure-with-caption">
+                <img src = "../images/L07-04-charakteristika.png"/>
+                <p><em>Priebeh elektromagnetického momentu pri prepínaní Y/D</em></p>
+            </div>
+        </div>
+
+        <h2>
+            6. Počítanie príkladov
+        </h2>
+
+        <p>
+            Na tomto mieste si môžete stiahnuť súbor potrebný pre výpočtové cvičenie. Súbor obsahuje prepočítané príklady, ktoré vám pomôžu pri riešení zadania a lepšom pochopení problematiky asynchrónnych strojov. Heslo vám poskytne cvičiaci na cvičení.
+        </p>
+
+        <p>
+            <a class="download" href="../files/AS_Priklady.pdf">Stiahnuť príklady</a>
+        </p>
 
         <h2>Doplnkové zdroje</h2>
 
         <ul>
             <li><a class="resource-link" href="https://www.martinus.sk/823579-zaklady-elektrotechniky-i/kniha">kniha</a> - <em>Základy elektrotechniky I</em></li>
             <li><a class="resource-link" href="https://www.martinus.sk/823535-zaklady-elektrotechniky-ii/kniha">kniha</a> - <em>Základy elektrotechniky II</em></li>
-        </ul> -->
+        </ul>
 
     </article>
 
