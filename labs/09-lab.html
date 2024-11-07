@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,18 +40,91 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
             <li>Zaťažovať asynchrónny motor a sledovať jeho chovanie.</li>
             <li>Vypočítať momentovú charakteristiku asynchrónneho motora.</li>
-        </ul> -->
+        </ul>
+
+        <h2>
+            Zaťažovanie asynchrónneho motora
+        </h2>
+
+        <p>
+            Pri zaťažovaní má motor pracovať za rovnakých podmienok ako v prevádzke. Motor môžeme zaťažovať dynamometrom, brzdou alebo derivačným dynamom, ktoré pracuje do odporov. Zaťažujeme od najvyšších hodnôt smerom k najnižším, aby sa teplota stroja počas merania menila čo najmenej. Napätie pri zaťažovaní udržujeme na konštantnej hodnote.
+        </p>
+
+        <p>
+            Asynchrónny motor budeme zaťažovať od hodnoty \(M_\mathrm{p} \approx 1{,}2\, M_\mathrm{N}\) smerom nadol. Aby sme sa vyhli prúdovému nárazu pri spúšťaní, pripojíme stroj na znížené napätie, ktoré postupne zvýšime na nominálnu hodnotu. Pri konštantnom nominálnom napätí \(U_1 = U_\mathrm{1N}\) meriame prúdy a príkon vo všetkých troch fázach motora, záťažový moment ako aj otáčky motora. 
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 90%;">
+                <img src = "../images/L08-02-open-measure.png"/>
+                <p><em>Schéma zapojenia asynchrónneho motora pri zaťažovaní</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Meranie momentovej charakteristiky pri zníženom napätí
+        </h2>
+
+        <p>
+            Schéma zapojenia zostáva rovnaká ako pri záťažovej skúške. Napájacie napätie nastavíme na hodnotu \( U_1 \approx U_\mathrm{N} / 2\). Pri meraní odčítavame moment a otáčky. Súčasne sledujeme, aby prúdy v jednotlivých fázach neboli väčšie ako \(1{,}5\,I_\mathrm{1N}\) . Tým istým spôsobom odmeriame aj druhú statickú charakteristiku pri napätí \( U_1 \approx U_\mathrm{N} / 3\).
+        </p>
+
+        <h2>
+            Výpočet momentovej charakteristiky pri zmene napätia
+        </h2>
+
+        <p>
+            Z parametrov náhradnej schémy nakrátko môžeme vypočítať momentovú charakteristiku asynchrónneho motora \( M = f(s) \) pri nominálnom, polovičnom a tretinovom napätí. 
+        </p>   
+
+        <p>
+            Moment asynchrónneho motora je možné vypočítať:
+
+            \[ M = \dfrac{3}{\omega_s} \dfrac{R_2^\prime}{s} \dfrac{U_1^2}{\left( R_1 + \dfrac{R_2^\prime}{s} \right)^2 + X_\mathrm{k}^2} \]
+        
+            kde synchrónnu rýchlosť vypočítame
+
+            \[ \omega_\mathrm{s} = \dfrac{2 \pi f}{p} \]
+
+            Vypočítané momentové charakteristiky pri zmene napätia by mali vyzerať nasledovne.
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 90%;">
+                <img src = "../images/L09-01-momentove-charakteristiky.png"/>
+                <p><em>Vypočítané momentové charakteristiky</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Odovzdávanie refrátu
+        </h2>
+
+        <p>
+            Vypracovaný referát je potrebné odovzdať cvičiacemu v dohodnutom termíne. Podmienky pre správne odovzdanie zadania:
+            <ul>
+                <li>Zadanie je vypracované v apalikácii <a class="resource-link" href="../xournal.html">Xournal++</a> v1.2.3.</li>
+                <li>Zadanie je odovzdané v archíve s názvom <strong>AS-Priezvisko-Meno.zip</strong> ktorý obsahuje:</li>
+                <ul>
+                    <li>Súbor v natívnom formáte - AS-Priezvisko-Meno.xopp</li>
+                    <li>Súbor v PDF formáte - AS-Priezvisko-Meno.pdf</li>
+                </ul>
+            </ul>
+
+            Ak tieto podmienky nebudu splnené, zadanie sa považuje na <strong>neodovzdané</strong>. V prípade dohody s cvičiacim je možné odovzdať referát aj v <strong>papierovej forme</strong>.
+        </p>
+
+        <p>
+            &nbsp;  
+        </p>
+
 
     </article>
 

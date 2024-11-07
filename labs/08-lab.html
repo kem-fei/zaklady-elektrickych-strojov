@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -38,22 +39,94 @@
     </header>
 
     <article>
-
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- 
+        
         <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
-            <li>Odmerať asynchrónny motor naprázdno a nakrátko.</li>
+            <li>Odmerať asynchrónny motor naprázdno.</li>
+            <li>Odmerať asynchrónny motor nakrátko.</li>
             <li>Určiť parametre náhradnej schémy asynchrónneho motora.</li>
-        </ul> -->
+        </ul>
 
+        <h2>
+            Určenie štítkových údajov asynchrónneho stroja
+        </h2>
 
+        <p>
+            Každý elektrický stroj ma svoj výrobný štítok, na ktorom sú uvedené všetky dôležité údaje. Na tomto cvičení sa bude merať asynchrónny stroj, ktorý má vo výrobnom štítku uvedené tieto údaje:
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 90%;">
+                <img src = "../images/L08-01-nameplate.png"/>
+                <p><em>Výrobný štítok asynchrónneho stroja</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Meranie odporov vinutí asynchrónneho stroja
+        </h2>
+
+        <p>
+            Odpory vinutí meriame miliohmmetrom. Statorové vinutia meriame na svorkovnici. Rotorové vinutie je vyvedené na napájacie svorky stroja. Rotor je so svorkami prepojený pomocou krúžkov a kief, ktoré zvyšujú odpor rotora. Z toho dôvodu je lepšie odmerať odpor rotora priamo na krúžkoch rotora.
+        </p>
+
+        <h2>
+            Meranie prevodu asynchrónneho stroja
+        </h2>
+
+        <p>
+            Prevod asynchrónneho stroja sa meria pri rozpojenom rotorovom vinutí. Meriame pri zníženom napätí (približne \( 0{,}8\,U_\mathrm{1N} \) ), aby sme sa vyhli oblasti nasýtenia. Po odmeraní statorového a rotorového napätia je možné dopočítať prevod pomocou nasledujúceho vzťahu:
+            
+            \[ a = \dfrac{U_\mathrm{1}}{U_\mathrm{2}} \]
+        </p>
+
+        <h2>
+            Meranie asynchrónneho motora naprázdno
+        </h2>
+        
+        <p>
+            Meraním v chode naprázdno zisťujeme, ako sa mení prúd naprázdno \(I_{10}\), príkon naprázdno \(P_0\) a účinník naprázdno \(\cos \varphi_0\) v závislosti od zmeny napájacieho napätia \(U_1\). Z merania určíme prúd naprázdno \(I_{10}\), účinník naprázdno \(\cos \varphi_0\), straty v železe \( \Delta P_\mathrm{Fe} \) a mechanické straty \( \Delta P_\mathrm{m} \) pre nominálnu hodnotu napájacieho napätia \( U_\mathrm{1N} \) . Asynchrónny motor v chode naprázdno je pripojený na symetrické trojfázové napätie a jeho hriadeľ je bez mechanického zaťaženia (\( M_\mathrm{z} = 0 \)). Rotorové vinutie je na svorkovnici spojené nakrátko. Schéma zapojenia merania je uvedená na obrázku nižšie Napájacie napätie motora postupne zvyšujeme od hodnoty \( U_1 \approx 0{,}3\,U_\mathrm{1N} \) do \( U_1 \approx 1{,}2\,U_\mathrm{1N} \). Meriame napätia, prúdy a výkony vo všetkých fázach. 
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption">
+                <img src = "../images/L08-02-open-measure.png"/>
+                <p><em>Schéma zapojenia asynchrónneho motora</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Meranie asynchrónneho motora nakrátko
+        </h2>
+
+        <p>
+            Meraním motora v stave nakrátko zisťujeme prúd statora nakrátko \(I_\mathrm{k}\), príkon motora nakrátko \(P_\mathrm{k}\) a účinník nakrátko \(\cos \varphi_\mathrm{k}\). Schéma zapojenia je rovnaká ako pri meraní motora vchode naprázdno, avšak rotor stroja je zabrzdený. Statorové vinutie napájame súmerným zníženým napätím tak, aby hodnota prúdu nakrátko neprekročila \(I_\mathrm{k} \approx 1{,}1\,I_\mathrm{1N}\). Pri meraní postupujeme od najvyššej hodnoty smerom nadol. 
+        </p>
+
+        <h2>
+            Odovzdávanie refrátu
+        </h2>
+
+        <p>
+            Vypracovaný referát je potrebné odovzdať cvičiacemu v dohodnutom termíne. Podmienky pre správne odovzdanie zadania:
+            <ul>
+                <li>Zadanie je vypracované v apalikácii <a class="resource-link" href="../xournal.html">Xournal++</a> v1.2.3.</li>
+                <li>Zadanie je odovzdané v archíve s názvom <strong>AS-Priezvisko-Meno.zip</strong> ktorý obsahuje:</li>
+                <ul>
+                    <li>Súbor v natívnom formáte - AS-Priezvisko-Meno.xopp</li>
+                    <li>Súbor v PDF formáte - AS-Priezvisko-Meno.pdf</li>
+                </ul>
+            </ul>
+
+            Ak tieto podmienky nebudu splnené, zadanie sa považuje na <strong>neodovzdané</strong>. V prípade dohody s cvičiacim je možné odovzdať referát aj v <strong>papierovej forme</strong>.
+        </p>
+
+        <p>
+            &nbsp;  
+        </p>
 
     </article>
 
