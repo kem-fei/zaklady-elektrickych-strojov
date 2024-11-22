@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,26 +40,46 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
         <ul>
-            <li></li>
-            <li></li>
+            <li>Pochopiť princíp činnosti jednosmerného stroja</li>
+            <li>Spoznať možné zapojenia jednosmených strojov</li>
+            <li>Prepočítať príklady pre jednosmerný stroj</li>
         </ul>
 
-
         <h2>
-            Princíp činnosti jednosmerného stroja
+            1. Čo je to jednosmerný stroj?
         </h2>
 
         <p>
+            Aj keď sú najrozšírenejšími pohonnými strojmi motory na striedavý prúd, napriek tomu majú stroje na jednosmerný prúd veľký význam a ich výroba sa naďalej rozvíja.
+        </p>
 
+        <p>
+            Jednosmerný motor sa skladá z viacerých častí, ktoré spolupracujú na premene elektrickej energie na mechanickú prácu. Pevnou časťou motora je <strong>stator</strong>, ktorý vytvára magnetické pole potrebné na pohyb rotora. Toto pole môže byť vytvorené buď permanentnými magnetmi v menších motoroch, alebo budiacimi vinutiami (v elektromagnetoch) v priemyselných motoroch. Magnetické pole statora je kľúčové, pretože interaguje s kotvou a generuje krútiaci moment. <strong>Rotor</strong>, nazývaný aj kotva, je otočná časť motora, ktorá obsahuje jadro z laminovaných železných plechov, aby sa minimalizovali straty spôsobené vírivými prúdmi. Vo vinutiach kotvy tečie elektrický prúd, ktorý vytvára vlastné magnetické pole, čím umožňuje interakciu s poľom statora. <strong>Komutátor</strong>, ktorý je pevne pripojený k rotoru, funguje ako mechanický prepínač. Ten umožňuje, aby krútiaci moment jednosmerného motora vždy pôsobil jedným smerom. Komutátor je vyrobený z medených segmentov izolovaných medzi sebou a je kľúčovou súčasťou pre správne fungovanie motora. Kefy, vyrobené z uhlíka alebo grafitu, slúžia na prenášanie prúdu z externého zdroja cez komutátor do vinutí kotvy. Dotýkajú sa komutátora a zabezpečujú elektrické spojenie.
+        </p>
+
+        <p>
+            Hlavnou nevýhodou jednosmerných strojov je komutátor (mechanický prepínač). Vyžaduje pravidelnú údržbu, je chúlostivý na agresívne prostredie a s ohľadom na možné iskrenie pri prevádzke, je komplikované použitie vo výbušnom prostredí.
+        </p>
+
+        <p>
+            Pre lepšiu predstavu toho ako vyzerá jednosmerný stroj je možné prezriet si fotografie jednosmerných strojov v <a class="link-in-text" href="../gallery/04-gallery-dc-motor.html">galérii jednosmerných strojov</a>.
+        </p>
+
+        <h2>
+            2. Princíp činnosti jednosmerného stroja
+        </h2>
+
+        <p>
+            Elektromagnetický moment jednosmerného stroja vznikne, ak sa vodiče rotora, ktorými preteká jednosmerný prúd \(I_\mathrm{a}\) nachádzajú v jednosmernom magnetickom poli vytvorenom statorom. Jednosmerné magnetické pole statora môže byť vytvorené buď permanentnými magnetmi, alebo častejšie statorovým vinutím pretekajúcim budiacim prúdom \(I_\mathrm{b}\). Magnetické pole statora a magnetické pole rotora spolu interagujú. Táto interakcia vytvára silu (Lorentzovu silu) na vodiče kotvy. Sila pôsobiaca na vodiče kotvy spôsobuje, že sa kotva začne otáčať. Tento pohyb je výsledkom krútiaceho momentu, ktorý vzniká z nerovnováhy síl v magnetickom poli. Aby motor fungoval plynule, komutátor pravidelne mení smer prúdu v kotve. Tým zabezpečuje, že krútiaci moment vždy pôsobí jedným smerom.
+        </p>
+
+        <p>
+            Pre lepšie pochopenie činnosti jednosmerného stroja odporúčame pozrieť si nasledujuce video.
         </p>
 
         <div class="video-container">   
@@ -72,14 +93,77 @@
             ></iframe>
         </div>
 
+        <h2>
+            3. Zapojenia jednosmerných motorov
+        </h2>
 
+        <p>
+            Ako už bolo spomenuté, jednosmerná stroj ma statorové (budiace) vinutie a rotorové (kotvové) vinutie. Konce týchto vinutí sú vyvedené. To umožnuje zapojiť motor viacerími spôsobmi nasledovne.
+        </p>
+
+        <h3>
+            Motor s cudzim budenim
+        </h3>
+
+        <p>
+            Z názvu vyplýva, že napájanie rotorového vinutia je iné ako napájanie budiaceho vinutia. Motor sa teda napája z dvoch nezávislých zdrojov, tak ako to je zobrazené na obrázku nižšie. Regulácia otáčok jednosmerného motora s cudzím budením je jednoduchá. Najčastejšie sa otáčky regulujú zmenou napájacieho napätia rotorového vinutia, pričom napájanie budenia ostáva konštantné. Existujú aj iné spôsoby riadenia otáčok, ktoré si nateraz uvádzať nebudeme.
+        </p>
+
+        <div class="figure", style="width: 70%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L10-01-DC-s-cuzdim-budenim.png"/>
+                <p><em>Schema zapojenia jednosmerného motora s cudzim budenim</em></p>
+            </div>
+        </div>
+
+        <h3>
+            Derivačný motor
+        </h3>
+        
+        <p>
+            V tomto prípade je rotorové vinutie ako aj statorové vinutie motora prpojené na jeden napájací zdroj. To znamená, že rotorové vinutie a statorové vinutie sú zapojené paralelne. Vinutia musia byť tak dimenzované na rovnaké napájacie napätia. Ak je napájací zdroj tvrdý, princíp činnosti ostáva rovnaký ako u motora s cudzím budením. Regulácia ale nie je až takta jednoduchá ako pri motore s cudzím budením. Zmenou napájacieho napätia by sa zmenil aj budiaci prúd a teda aj magnetický tok. Z toho dôvodu sa rotorový a budiaci prúd riadi osobitne, čo si vyžaduje pridanie prvkov do obvodu kotvy a budenia. Schéma zapojenia derivačného motora je zobrazená na nasledujúcom obrázku.
+        </p>
+
+        <div class="figure", style="width: 70%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L10-02-DC-derivacny.png"/>
+                <p><em>Schema zapojenia jednosmerného derivačného motora</em></p>
+            </div>
+        </div>
+
+        <h3>
+            Sériový motor
+        </h3>
+
+        <p>
+            Ako už z názvu vyplýva, rotorové vinutie ako aj statorové vinutie zapojené do série, tak ako to je zobrazené na obrázku nižšie. Z toho vyplýva, že prúd tečúci rotorovým vinutím je rovnaký ako prúd tečúci statorovým vinutím. Magnetický tok v sériovom motore sa vytvára zaťažovacím prúdom. Čím väčšie je zaťaženie, tým väčší je prúd a tým ma motor väčší moment. Teoreticky pri veľmi veľkom zaťažení nie je možné tento motor úplne zastaviť, naopak pri nulovom zaťažení sú otáčky motora nekonečné. Tento motor tak nemožno spúšťať bez zaťaženia.
+        </p>
+
+        <div class="figure", style="width: 70%;">
+            <div class="figure-with-caption">
+                <img src = "../images/L10-03-DC-seriovy.png"/>
+                <p><em>Schema zapojenia jednosmerného sériového motora</em></p>
+            </div>
+        </div>
+
+        <h2>
+            4. Počítanie príkladov
+        </h2>
+
+        <p>
+            Na tomto mieste si môžete stiahnuť súbor potrebný pre výpočtové cvičenie. Súbor obsahuje prepočítané príklady, ktoré vám pomôžu pri riešení zadania a lepšom pochopení problematiky jednosmerných strojov. Heslo vám poskytne cvičiaci na cvičení.
+        </p>
+
+        <p>
+            <a class="download" href="../files/JS_Priklady.pdf">Stiahnuť príklady</a>
+        </p>
 
         <h2>Doplnkové zdroje</h2>
 
         <ul>
             <li><a class="resource-link" href="https://www.martinus.sk/823579-zaklady-elektrotechniky-i/kniha">kniha</a> - <em>Základy elektrotechniky I</em></li>
             <li><a class="resource-link" href="https://www.martinus.sk/823535-zaklady-elektrotechniky-ii/kniha">kniha</a> - <em>Základy elektrotechniky II</em></li>
-        </ul> -->
+        </ul>
 
     </article>
 
