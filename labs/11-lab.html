@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -39,11 +40,7 @@
 
     <article>
 
-        <p>
-            Na stránke sa intenzívne pracuje.
-        </p>
-
-        <!-- <h2>
+        <h2>
             Ciele cvičenia
         </h2>
 
@@ -52,8 +49,103 @@
             <li>Odmerať rýchlostnú charakteristiku pri zníženom napätí</li>
             <li>Odmerať rýchlostnú charakteristiku pri zníženom budení</li>
             <li>Odmerať momentovú charakteristiku jednosmerného motora</li>
-        </ul> -->
+        </ul>
 
+        <h2>
+            Určenie štítkových údajov asynchrónneho stroja
+        </h2>
+
+        <p>
+            Každý elektrický stroj ma svoj výrobný štítok, na ktorom sú uvedené všetky dôležité údaje. Na tomto cvičení sa bude merať jednosmerný stroj s cudzím budením, ktorý má vo výrobnom štítku uvedené tieto údaje:
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 90%;">
+                <img src = "../images/L11-01-nameplate.png"/>
+                <p><em>Výrobný štítok jednosmerného stroja s cudzím budením</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Zaťažovanie JSCB (prirodzená charakteristika)
+        </h2>
+
+        <p>
+            Počas merania udržujeme budiaci prúd motora a napätie kotvy na konštantnej hodnote. Meraný motor zaťažíme dynamometrom asi na \(M_\mathrm{p} \approx 1{,}2\,M_\mathrm{N}\). Zaťažovací moment znižujeme približne po \(0{,}2\,M_\mathrm{N}\) až do nuly. Odčítame zaťažovací moment \(M\), prúd kotvy \(I_\mathrm{a}\) a otáčky \(n\).
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 70%;">
+                <img src = "../images/L11-02-nominal.svg"/>
+                <p><em>Zaťažovanie JSCB (prirodzená charakteristika)</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Zaťažovanie JMCB pri zníženom napätí
+        </h2>
+
+        <p>
+            Počas merania sú budiaci prúd \(I_\mathrm{b}\) a napätie kotvy \(U_\mathrm{a}\) konštantné. Motor zaťažíme dynamometrom asi na \(M_\mathrm{p} \approx 1{,}2\,M_\mathrm{N}\). Zaťažovací moment znižujeme po \(0{,}2\,M_\mathrm{N}\) až do nuly. Odčítame zaťažovací moment \(M\), prúd kotvy \(I_\mathrm{a}\) a otáčky motora \(n\). Meranie urobíme pre \(U_\mathrm{a} \approx 0{.}95\,U_\mathrm{aN}\) a \(U_\mathrm{a} \approx 0{.}90\,U_\mathrm{aN}\).
+        </p>
+
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 70%;">
+                <img src = "../images/L11-03-low-U.svg"/>
+                <p><em>Zaťažovanie JMCB pri zníženom napätí</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Zaťažovanie JMCB pri zníženom budení
+        </h2>
+
+        <p>
+            Motor meriame pri nominálnom napájacom napätí \(U_\mathrm{aN}\) a zníženom budiacom prúde \(I_\mathrm{b} < I_\mathrm{bN}\). Počas merania sú budiaci prúd motora \(I_\mathrm{b}\) a napätie kotvy \(U_\mathrm{a} = U_\mathrm{aN}\) konštantné. Motor zaťažíme asi na hodnotu \(M_\mathrm{p} \approx 1{,}2\,M_\mathrm{N}\). Zaťažovací moment znižujeme približne po \(0{,}2\,M_\mathrm{N}\) až do nuly. Odčítame zaťažovací moment \(M\), prúd kotvy \(I_\mathrm{a}\) ako aj otáčky motora \(n\). Zmeriame dva priebehy rýchlostných charakteristík pri budiacom prúde \(I_\mathrm{b} \approx 0{,}9\,I_\mathrm{bN}\) a \(I_\mathrm{b} \approx 0{,}8\,I_\mathrm{bN}\).
+        </p>
+        
+        <div class="figure"></div>
+            <div class="figure-with-caption" style="width: 70%;">
+                <img src = "../images/L11-04-low-I.svg"/>
+                <p><em>Zaťažovanie JMCB pri zníženom budení</em></p>
+            </div>
+        </div>
+
+        <h2>
+            Vypracovanie referátu
+        </h2>
+
+        <p>
+            Z merania je potrebné vypracovať referát a odovzdať ho cvičiacmu. K meraniu je možné vytlačiť si tabuľky, ktoré sú potrebné pre meranie.
+        </p>
+
+        <p>
+            <a class="download" href="../files/JS_Meranie.pdf">Stiahnuť referát</a>
+
+            <a class="download" href="../files/JS_Tabulky.pdf">Stiahnuť tabuľky</a>
+        </p>
+
+        <h2>
+            Odovzdávanie referátu
+        </h2>
+
+        <p>
+            Vypracovaný referát je potrebné odovzdať cvičiacemu v dohodnutom termíne. Podmienky pre správne odovzdanie zadania:
+            <ul>
+                <li>Zadanie je vypracované v aplikácii <a class="resource-link" href="../xournal.html">Xournal++</a> v1.2.3.</li>
+                <li>Zadanie je odovzdané v archíve s názvom <strong>JS-Priezvisko-Meno.zip</strong> ktorý obsahuje:</li>
+                <ul>
+                    <li>Súbor v natívnom formáte - JS-Priezvisko-Meno.xopp</li>
+                    <li>Súbor v PDF formáte - JS-Priezvisko-Meno.pdf</li>
+                </ul>
+            </ul>
+
+            Ak tieto podmienky nebudu splnené, zadanie sa považuje na <strong>neodovzdané</strong>. V prípade dohody s cvičiacim je možné odovzdať referát aj v <strong>papierovej forme</strong>.
+        </p>
+
+        <p>
+            &nbsp;  
+        </p>
 
     </article>
 
